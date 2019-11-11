@@ -6,7 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["react"],
+  "keywords": [
+    "react"
+  ],
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
 }
