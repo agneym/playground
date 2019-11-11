@@ -74,6 +74,9 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
+# microbundle cache
+.rts2_cache_*
+
 # next.js build output
 .next
 
@@ -109,4 +112,5 @@ public/
 # End of https://www.gitignore.io/api/node,visualstudiocode
 
 # Parcel Example Build
-example/dist
+# Microbundle Build
+dist

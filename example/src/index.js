@@ -1,8 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
+import Editor from "@agney/react-editor";
 
 const App = () => {
-  return <p>App Component</p>;
+  return <Editor />;
 };
 
 const rootEl = document.getElementById("root");
