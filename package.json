@@ -1,0 +1,26 @@
+{
+  "name": "react-editor-workspace",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn workspace example build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "workspaces": [
+    "react-editor",
+    "example"
+  ],
+  "devDependencies": {
+    "husky": "^3.0.9",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BoyWithSilverWings/react-editor.git"
+  }
+}

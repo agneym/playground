@@ -1,12 +1,12 @@
 {
-  "name": "react-editor",
+  "name": "@agney/react-editor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["react"],
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
-  "license": "ISC"
+  "license": "MIT"
 }
