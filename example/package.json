@@ -14,5 +14,8 @@
     "@agney/react-editor": "*",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
   }
 }

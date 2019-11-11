@@ -2,10 +2,14 @@
   "name": "@agney/react-editor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "microbundle watch",
+    "build": "microbundle"
   },
+  "source": "src/editor.js",
+  "main": "dist/editor.js",
+  "module": "dist/editor.mjs",
+  "unpkg": "dist/editor.umd.js",
   "keywords": [
     "react"
   ],
@@ -16,6 +20,13 @@
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.3",
+    "@testing-library/react": "^9.3.2",
+    "@types/jest": "^24.0.22",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "jest": "^24.9.0",
+    "microbundle": "^0.11.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   }
