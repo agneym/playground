@@ -9,5 +9,10 @@
   },
   "keywords": [],
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@agney/react-editor": "*",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
 }
