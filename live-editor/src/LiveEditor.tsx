@@ -1,7 +1,15 @@
 import React, { FC } from "react";
 
-const Editor: FC = () => {
-  return <p>Editor Component is Ready</p>;
+import Editor from "./Editor";
+import Result from "./Result";
+
+const LiveEditor: FC = () => {
+  return (
+    <div>
+      <Editor />
+      <Result />
+    </div>
+  );
 };
 
-export default Editor;
+export default LiveEditor;

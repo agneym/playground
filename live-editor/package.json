@@ -29,5 +29,8 @@
     "microbundle": "^0.11.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
+  },
+  "dependencies": {
+    "styled-components": "^4.4.1"
   }
 }
