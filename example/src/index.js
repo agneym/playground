@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
-import Editor from "@agney/react-editor";
+import LiveEditor from "@agney/live-editor";
 
 const App = () => {
-  return <Editor />;
+  return <LiveEditor />;
 };
 
 const rootEl = document.getElementById("root");

@@ -6,7 +6,7 @@
     "start": "microbundle watch",
     "build": "microbundle"
   },
-  "source": "src/editor.tsx",
+  "source": "src/LiveEditor.tsx",
   "main": "dist/editor.js",
   "module": "dist/editor.mjs",
   "unpkg": "dist/editor.umd.js",
