@@ -1,11 +1,13 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import Header from "./Header";
+import { IEditorTabs } from "../types";
 
 const Editor: FC = () => {
+  const [activeTab, setActiveTab] = useState<IEditorTabs>("js");
   return (
     <div>
-      <Header />
+      <Header activeTab={activeTab} setActive={setActiveTab} />
     </div>
   );
 };
