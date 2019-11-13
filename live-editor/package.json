@@ -25,6 +25,7 @@
     "@types/jest": "^24.0.22",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^4.4.0",
     "jest": "^24.9.0",
     "microbundle": "^0.11.0",
     "react": "^16.11.0",
