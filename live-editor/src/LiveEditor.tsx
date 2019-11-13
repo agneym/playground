@@ -2,19 +2,25 @@ import React, { FC, useState } from "react";
 
 import Editor from "./Editor";
 import Result from "./Result";
-import { ISnippet } from "./types";
+import { ISnippet, IEditorTabs } from "./types";
 
 const initialSnippet = {
-  html: ``,
+  markup: ``,
   css: ``,
-  js: ``,
+  javascript: ``,
 };
 
 const LiveEditor: FC = () => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
+  const onSnippetChange = (changed: string, type: IEditorTabs) => {
+    setSnippet(snippet => ({
+      ...snippet,
+      [type]: changed,
+    }));
+  };
   return (
     <div>
-      <Editor />
+      <Editor code={snippet} onChange={onSnippetChange} />
       <Result />
     </div>
   );

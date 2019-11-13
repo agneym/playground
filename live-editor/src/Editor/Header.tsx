@@ -11,9 +11,9 @@ interface IProps {
 const Header: FC<IProps> = ({ activeTab, setActive }) => {
   const tabs: Readonly<ITabConfig[]> = useMemo(
     () => [
-      { name: "HTML", value: "html" },
+      { name: "HTML", value: "markup" },
       { name: "CSS", value: "css" },
-      { name: "JS", value: "js" },
+      { name: "JS", value: "javascript" },
     ],
     []
   );

@@ -1,10 +1,10 @@
 export interface ISnippet {
-  html: string;
+  markup: string;
   css: string;
-  js: string;
+  javascript: string;
 }
 
-export type IEditorTabs = "html" | "css" | "js";
+export type IEditorTabs = "markup" | "css" | "javascript";
 
 export interface ITabConfig {
   name: string;
