@@ -3,7 +3,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "yarn workspace example build"
+    "start": "yarn workspace @agney/live-editor start",
+    "start-example": "yarn workspace example start"
   },
   "husky": {
     "hooks": {

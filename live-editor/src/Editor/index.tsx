@@ -7,7 +7,10 @@ import styled from "styled-components";
 import Header from "./Header";
 import { IEditorTabs, ISnippet } from "../types";
 
-const Container = styled.div``;
+const Container = styled.div`
+  width: 50%;
+  flex: 0.5;
+`;
 
 interface IProps {
   code: ISnippet;
@@ -17,7 +20,7 @@ interface IProps {
 const Editor: FC<IProps> = ({ code, onChange }) => {
   const [activeTab, setActiveTab] = useState<IEditorTabs>("javascript");
   return (
-    <div>
+    <Container>
       <Header activeTab={activeTab} setActive={setActiveTab} />
       <SimpleEditor
         value={code[activeTab]}
@@ -44,7 +47,7 @@ const Editor: FC<IProps> = ({ code, onChange }) => {
         )}
         padding={10}
       />
-    </div>
+    </Container>
   );
 };
 
