@@ -2,9 +2,12 @@ import React, { FC, useState, Fragment } from "react";
 import SimpleEditor from "react-simple-code-editor";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/nightOwl";
+import styled from "styled-components";
 
 import Header from "./Header";
 import { IEditorTabs, ISnippet } from "../types";
+
+const Container = styled.div``;
 
 interface IProps {
   code: ISnippet;

@@ -966,6 +966,26 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
+"@reach/auto-id@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.5.3.tgz#f86ed38b04fa464c5d48a8c4ba27f07993e37e6a"
+  integrity sha512-IkWKzMxNUG1xYXYDhkDtwfcslnNAQgUKTch4Vx+whswTGhhoXMjIzIjlxeufIvOvJ3HGWBzaNYdY7OUDTq37AQ==
+
+"@reach/tabs@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@reach/tabs/-/tabs-0.5.4.tgz#c0d16f43654df726ae1fa5116be6d529dcd19bb5"
+  integrity sha512-yQkkIZHX88xMmx9H3EuDAONNAPxKq+cW94gaKQh5do4tvg0/fwgsiJjWi8/vzsBNjdPRpiV8evQHGufg/MvdNg==
+  dependencies:
+    "@reach/auto-id" "^0.5.3"
+    "@reach/utils" "^0.5.0"
+    prop-types "^15.7.2"
+    warning "^4.0.3"
+
+"@reach/utils@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.5.0.tgz#2a64238a5a3ee57ee9742cf2579cacf41ae3a036"
+  integrity sha512-MXYKmCz7BGiCLuZnPI1sBlxQFdpdv3O1Oc13k6oumJGd0eMN3+utGSs20gBH17Ml3IKVqY+9UOLEuqGfyWytHQ==
+
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
@@ -6972,7 +6992,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8851,6 +8871,13 @@ walker@^1.0.7, walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+warning@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
+  dependencies:
+    loose-envify "^1.0.0"
 
 wcwidth@^1.0.1:
   version "1.0.1"

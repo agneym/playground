@@ -1,8 +1,14 @@
 import React, { FC, useState } from "react";
+import styled from "styled-components";
 
 import Editor from "./Editor";
 import Result from "./Result";
 import { ISnippet, IEditorTabs } from "./types";
+
+const Container = styled.div`
+  border: 0.1em solid rgba(0, 0, 0, 0.3);
+  display: flex;
+`;
 
 const initialSnippet = {
   markup: ``,
@@ -19,10 +25,10 @@ const LiveEditor: FC = () => {
     }));
   };
   return (
-    <div>
+    <Container>
       <Editor code={snippet} onChange={onSnippetChange} />
       <Result />
-    </div>
+    </Container>
   );
 };
 
