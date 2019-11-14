@@ -1,10 +1,11 @@
 import React, { FC, useMemo } from "react";
 import styled from "styled-components";
-import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
+import { Tabs, Tab, TabPanels, TabPanel } from "@reach/tabs";
 
 import { IEditorTabs, ISnippet } from "../types";
 import EditorSetup from "./EditorSetup";
 import { ITabConfig } from "../types";
+import { StyledTabList, StyledTab } from "./TabStyles";
 
 const TabContainer = styled(Tabs)`
   width: 50%;
@@ -28,11 +29,11 @@ const Editor: FC<IProps> = ({ code, onChange }) => {
   );
   return (
     <TabContainer>
-      <TabList>
+      <StyledTabList>
         {tabs.map(tab => (
-          <Tab key={tab.value}>{tab.name}</Tab>
+          <StyledTab key={tab.value}>{tab.name}</StyledTab>
         ))}
-      </TabList>
+      </StyledTabList>
       <TabPanels>
         {tabs.map(tab => (
           <TabPanel key={tab.value}>
