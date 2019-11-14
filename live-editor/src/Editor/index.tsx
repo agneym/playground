@@ -10,6 +10,7 @@ import { IEditorTabs, ISnippet } from "../types";
 const Container = styled.div`
   width: 50%;
   flex: 0.5;
+  border-right: 0.05em solid rgba(0, 0, 0, 0.2);
 `;
 
 interface IProps {

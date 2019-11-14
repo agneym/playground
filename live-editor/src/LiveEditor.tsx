@@ -8,6 +8,7 @@ import { ISnippet, IEditorTabs } from "./types";
 const Container = styled.div`
   border: 0.1em solid rgba(0, 0, 0, 0.3);
   display: flex;
+  min-height: 10em;
 `;
 
 const initialSnippet = {
