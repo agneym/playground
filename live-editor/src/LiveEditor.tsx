@@ -14,7 +14,7 @@ const Container = styled.div`
 const initialSnippet = {
   markup: ``,
   css: ``,
-  javascript: ``,
+  javascript: `console.log("frame")`,
 };
 
 const LiveEditor: FC = () => {

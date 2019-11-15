@@ -1,23 +1,21 @@
 import React, { FC, useMemo, useState } from "react";
-import { debounce } from "lodash";
 
 import { ISnippet } from "../types";
 import constructSnippet from "../utils/constructSnippet";
 
-const debouncedConstructSnippet = debounce(constructSnippet, 800);
-
 interface IProps {
+  id: string;
   snippet: ISnippet;
 }
 
-const Frame: FC<IProps> = ({ snippet }) => {
-  const id = "example";
+const Frame: FC<IProps> = ({ id, snippet }) => {
   const [code, setCode] = useState("");
 
   useMemo(() => {
-    const code = debouncedConstructSnippet(snippet, id);
+    const code = constructSnippet(snippet, id);
     setCode(code);
   }, [snippet]);
+
   return (
     <iframe
       height="100%"

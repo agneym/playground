@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from "react";
+import React, { FC, useMemo, useEffect, useState } from "react";
 
 import {
   StyledTabList,
@@ -16,6 +16,8 @@ interface IProps {
 }
 
 const Result: FC<IProps> = ({ snippet }) => {
+  const id = "example";
+  const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
     () => [
       { name: "Result", value: "result" },
@@ -23,6 +25,19 @@ const Result: FC<IProps> = ({ snippet }) => {
     ],
     []
   );
+  useEffect(() => {
+    function waitForMessage() {
+      if (typeof window !== "undefined") {
+        window.addEventListener("message", data => {
+          if (data.data.source === `frame-${id}`) {
+            setLogs(prevLogs => [...prevLogs, ...data.data.message]);
+          }
+        });
+      }
+    }
+    waitForMessage();
+  }, [id]);
+  console.log(logs);
   return (
     <StyledTabs>
       <StyledTabList>
@@ -32,10 +47,10 @@ const Result: FC<IProps> = ({ snippet }) => {
       </StyledTabList>
       <StyledTabPanels>
         <StyledTabPanel>
-          <Frame snippet={snippet} />
+          <Frame id={id} snippet={snippet} />
         </StyledTabPanel>
         <StyledTabPanel>
-          <Console logs={[]} />
+          <Console logs={logs} />
         </StyledTabPanel>
       </StyledTabPanels>
     </StyledTabs>
