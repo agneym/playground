@@ -8,6 +8,8 @@ import {
   StyledTabs,
 } from "../TabStyles";
 import { ISnippet, ITabConfig, IResultTabs } from "../types";
+import Console from "./Console";
+import Frame from "./Frame";
 
 interface IProps {
   snippet: ISnippet;
@@ -30,9 +32,11 @@ const Result: FC<IProps> = ({ snippet }) => {
       </StyledTabList>
       <StyledTabPanels>
         <StyledTabPanel>
-          <p>{JSON.stringify(snippet)}</p>
+          <Frame snippet={snippet} />
         </StyledTabPanel>
-        <StyledTabPanel>{<p>COnsole here</p>}</StyledTabPanel>
+        <StyledTabPanel>
+          <Console logs={[]} />
+        </StyledTabPanel>
       </StyledTabPanels>
     </StyledTabs>
   );

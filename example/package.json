@@ -13,10 +13,15 @@
   "license": "MIT",
   "dependencies": {
     "@agney/live-editor": "*",
+    "babel-polyfill": "^6.26.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
-  }
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 3%"
+  ]
 }

@@ -23,6 +23,7 @@
     "@testing-library/jest-dom": "^4.2.3",
     "@testing-library/react": "^9.3.2",
     "@types/jest": "^24.0.22",
+    "@types/lodash": "^4.14.147",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "@types/react-inspector": "^3.0.0",
@@ -34,6 +35,7 @@
   },
   "dependencies": {
     "@reach/tabs": "^0.5.4",
+    "lodash": "^4.17.15",
     "prism-react-renderer": "^1.0.2",
     "react-inspector": "^4.0.0",
     "react-simple-code-editor": "^0.10.0",
