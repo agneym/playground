@@ -2,8 +2,14 @@ import React, { FC, Fragment } from "react";
 import SimpleEditor from "react-simple-code-editor";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/nightOwl";
+import styled from "styled-components";
 
 import { IEditorTabs } from "../types";
+
+const StyledSimpleEditor = styled(SimpleEditor)`
+  background-color: #000000;
+  color: #ffffff;
+`;
 
 interface IProps {
   code: string;
@@ -13,9 +19,10 @@ interface IProps {
 
 const EditorSetup: FC<IProps> = ({ code, language, onChange }) => {
   return (
-    <SimpleEditor
+    <StyledSimpleEditor
       value={code}
       onValueChange={(value: string) => onChange(value, language)}
+      style={{ height: "100%" }}
       highlight={code => (
         <Highlight
           {...defaultProps}

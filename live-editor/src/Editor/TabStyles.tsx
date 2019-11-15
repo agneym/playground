@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TabList, Tab } from "@reach/tabs";
+import { TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 
 export const StyledTabList = styled(TabList)`
   border-bottom: 0.1em solid rgba(0, 0, 0, 0.1);
@@ -16,4 +16,12 @@ export const StyledTab = styled(Tab)`
   &[data-selected] {
     border-bottom: 0.1em solid #000000;
   }
+`;
+
+export const StyledTabPanels = styled(TabPanels)`
+  flex: 1;
+`;
+
+export const StyledTabPanel = styled(TabPanel)`
+  height: 100%;
 `;

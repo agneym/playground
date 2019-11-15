@@ -1,16 +1,23 @@
 import React, { FC, useMemo } from "react";
 import styled from "styled-components";
-import { Tabs, Tab, TabPanels, TabPanel } from "@reach/tabs";
+import { Tabs } from "@reach/tabs";
 
 import { IEditorTabs, ISnippet } from "../types";
 import EditorSetup from "./EditorSetup";
 import { ITabConfig } from "../types";
-import { StyledTabList, StyledTab } from "./TabStyles";
+import {
+  StyledTabList,
+  StyledTab,
+  StyledTabPanels,
+  StyledTabPanel,
+} from "./TabStyles";
 
 const TabContainer = styled(Tabs)`
   width: 50%;
   flex: 0.5;
   border-right: 0.05em solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 `;
 
 interface IProps {
@@ -34,17 +41,17 @@ const Editor: FC<IProps> = ({ code, onChange }) => {
           <StyledTab key={tab.value}>{tab.name}</StyledTab>
         ))}
       </StyledTabList>
-      <TabPanels>
+      <StyledTabPanels>
         {tabs.map(tab => (
-          <TabPanel key={tab.value}>
+          <StyledTabPanel key={tab.value}>
             <EditorSetup
               code={code[tab.value]}
               onChange={onChange}
               language={tab.value}
             />
-          </TabPanel>
+          </StyledTabPanel>
         ))}
-      </TabPanels>
+      </StyledTabPanels>
     </TabContainer>
   );
 };
