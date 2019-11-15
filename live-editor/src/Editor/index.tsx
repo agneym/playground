@@ -1,23 +1,19 @@
 import React, { FC, useMemo } from "react";
 import styled from "styled-components";
-import { Tabs } from "@reach/tabs";
 
 import { IEditorTabs, ISnippet } from "../types";
 import EditorSetup from "./EditorSetup";
 import { ITabConfig } from "../types";
 import {
+  StyledTabs,
   StyledTabList,
   StyledTab,
   StyledTabPanels,
   StyledTabPanel,
-} from "./TabStyles";
+} from "../TabStyles";
 
-const TabContainer = styled(Tabs)`
-  width: 50%;
-  flex: 0.5;
+const TabContainer = styled(StyledTabs)`
   border-right: 0.05em solid rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
 `;
 
 interface IProps {
@@ -26,7 +22,7 @@ interface IProps {
 }
 
 const Editor: FC<IProps> = ({ code, onChange }) => {
-  const tabs: Readonly<ITabConfig[]> = useMemo(
+  const tabs: Readonly<ITabConfig<IEditorTabs>[]> = useMemo(
     () => [
       { name: "HTML", value: "markup" },
       { name: "CSS", value: "css" },

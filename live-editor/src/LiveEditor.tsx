@@ -8,7 +8,7 @@ import { ISnippet, IEditorTabs } from "./types";
 const Container = styled.div`
   border: 0.1em solid rgba(0, 0, 0, 0.3);
   display: flex;
-  min-height: 10em;
+  min-height: 20em;
 `;
 
 const initialSnippet = {
@@ -28,7 +28,7 @@ const LiveEditor: FC = () => {
   return (
     <Container>
       <Editor code={snippet} onChange={onSnippetChange} />
-      <Result />
+      <Result snippet={snippet} />
     </Container>
   );
 };

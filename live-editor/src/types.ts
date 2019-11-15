@@ -5,8 +5,9 @@ export interface ISnippet {
 }
 
 export type IEditorTabs = "markup" | "css" | "javascript";
+export type IResultTabs = "result" | "console";
 
-export interface ITabConfig {
+export interface ITabConfig<T> {
   name: string;
-  value: IEditorTabs;
+  value: T;
 }

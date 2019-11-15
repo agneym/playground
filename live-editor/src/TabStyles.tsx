@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
+
+export const StyledTabs = styled(Tabs)`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+`;
 
 export const StyledTabList = styled(TabList)`
   border-bottom: 0.1em solid rgba(0, 0, 0, 0.1);
