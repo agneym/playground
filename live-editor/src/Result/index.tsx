@@ -37,7 +37,6 @@ const Result: FC<IProps> = ({ snippet }) => {
     }
     waitForMessage();
   }, [id]);
-  console.log(logs);
   return (
     <StyledTabs>
       <StyledTabList>
