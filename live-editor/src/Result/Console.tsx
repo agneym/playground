@@ -8,7 +8,7 @@ interface IProps {
 const Console: FC<IProps> = ({ logs }) => {
   return (
     <div>
-      {logs.map((log: any, index: number) => (
+      {logs.map((log: unknown, index: number) => (
         <Inspector data={log} key={index} theme="chromeDark" />
       ))}
     </div>
