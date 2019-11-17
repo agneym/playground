@@ -1535,11 +1535,6 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-import-visitor@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-import-visitor/-/babel-plugin-import-visitor-0.2.0.tgz#93b305f833d67a93cd3f9af29182d49b9b4b6f8a"
-  integrity sha512-dTCwADFU6U7GFpa2G7C4wRAfOIm9VGcaxgAkHoDRchg8icGm1GgCCqdOW8fHHx0S5vjl5omivOuEhBin9VoljQ==
-
 babel-plugin-istanbul@^5.1.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-5.2.0.tgz#df4ade83d897a92df069c4d9a25cf2671293c854"

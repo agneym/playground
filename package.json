@@ -18,13 +18,12 @@
   "devDependencies": {
     "husky": "^3.0.9",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "typescript": "^3.7.2"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:BoyWithSilverWings/react-editor.git"
   },
-  "dependencies": {
-    "typescript": "^3.7.2"
-  }
+  "dependencies": {}
 }

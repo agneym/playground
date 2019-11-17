@@ -36,7 +36,6 @@
   "dependencies": {
     "@babel/standalone": "^7.7.3",
     "@reach/tabs": "^0.5.4",
-    "babel-plugin-import-visitor": "^0.2.0",
     "babel-plugin-unpkg": "^1.0.0",
     "lodash": "^4.17.15",
     "prism-react-renderer": "^1.0.2",
