@@ -1,9 +1,10 @@
 import React, { FC, useState } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import Editor from "./Editor";
 import Result from "./Result";
 import { ISnippet, IEditorTabs } from "./types";
+import theme from "./utils/theme";
 
 const Container = styled.div`
   border: 0.1em solid rgba(0, 0, 0, 0.3);
@@ -26,10 +27,12 @@ const LiveEditor: FC = () => {
     }));
   };
   return (
-    <Container>
-      <Editor code={snippet} onChange={onSnippetChange} />
-      <Result snippet={snippet} />
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Editor code={snippet} onChange={onSnippetChange} />
+        <Result snippet={snippet} />
+      </Container>
+    </ThemeProvider>
   );
 };
 
