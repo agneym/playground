@@ -12,14 +12,13 @@ const Container = styled.div`
   min-height: ${props => props.theme.container.minHeight};
 `;
 
-const initialSnippet = {
-  markup: ``,
-  css: ``,
-  javascript: ``,
-};
+interface IProps {
+  initialSnippet: ISnippet;
+}
 
-const LiveEditor: FC = () => {
+const LiveEditor: FC<IProps> = ({ initialSnippet }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
+  console.log(snippet);
   const onSnippetChange = (changed: string, type: IEditorTabs) => {
     setSnippet(snippet => ({
       ...snippet,

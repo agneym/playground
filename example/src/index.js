@@ -4,7 +4,12 @@ import "babel-polyfill";
 import LiveEditor from "@agney/live-editor";
 
 const App = () => {
-  return <LiveEditor />;
+  const snippet = {
+    markup: `<h1>Content</h1>`,
+    css: `h1 {color: red}`,
+    javascript: `alert('this')`,
+  };
+  return <LiveEditor initialSnippet={snippet} />;
 };
 
 const rootEl = document.getElementById("root");
