@@ -1,4 +1,4 @@
-import React, { FC, useMemo, useState } from "react";
+import React, { FC, useMemo, useState, memo } from "react";
 
 import { ISnippet } from "../types";
 import constructSnippet from "../utils/constructSnippet";
@@ -8,7 +8,7 @@ interface IProps {
   snippet: ISnippet;
 }
 
-const Frame: FC<IProps> = ({ id, snippet }) => {
+const Frame: FC<IProps> = memo(({ id, snippet }) => {
   const [code, setCode] = useState("");
 
   useMemo(() => {
@@ -25,6 +25,6 @@ const Frame: FC<IProps> = ({ id, snippet }) => {
       srcDoc={code}
     />
   );
-};
+});
 
 export default Frame;
