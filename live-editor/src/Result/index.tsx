@@ -13,9 +13,10 @@ import Frame from "./Frame";
 
 interface IProps {
   snippet: ISnippet;
+  defaultTab: IResultTabs;
 }
 
-const Result: FC<IProps> = ({ snippet }) => {
+const Result: FC<IProps> = ({ snippet, defaultTab }) => {
   const id = "example";
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
@@ -38,7 +39,7 @@ const Result: FC<IProps> = ({ snippet }) => {
     waitForMessage();
   }, [id]);
   return (
-    <StyledTabs>
+    <StyledTabs defaultIndex={tabs.findIndex(tab => tab.value === defaultTab)}>
       <StyledTabList>
         {tabs.map(tab => (
           <StyledTab key={tab.value}>{tab.name}</StyledTab>

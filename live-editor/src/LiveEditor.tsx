@@ -40,7 +40,7 @@ const LiveEditor: FC<IProps> = ({
           defaultTab={defaultEditorTab}
           onChange={onSnippetChange}
         />
-        <Result snippet={snippet} />
+        <Result snippet={snippet} defaultTab={defaultResultTab} />
       </Container>
     </ThemeProvider>
   );
