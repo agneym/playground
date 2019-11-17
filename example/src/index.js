@@ -7,7 +7,7 @@ const App = () => {
   const snippet = {
     markup: `<h1>Content</h1>`,
     css: `h1 {color: red}`,
-    javascript: `alert('this')`,
+    javascript: `console.log('this')`,
   };
   return <LiveEditor initialSnippet={snippet} />;
 };
