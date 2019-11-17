@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import "babel-polyfill";
-import LiveEditor from "@agney/live-editor";
+import Playground from "@agney/playground";
 
 const App = () => {
   const snippet = {
@@ -10,7 +10,7 @@ const App = () => {
     javascript: `console.log('this')`,
   };
   return (
-    <LiveEditor
+    <Playground
       initialSnippet={snippet}
       defaultEditorTab="css"
       defaultResultTab="console"

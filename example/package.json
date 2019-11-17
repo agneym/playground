@@ -12,7 +12,7 @@
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
   "dependencies": {
-    "@agney/live-editor": "*",
+    "@agney/playground": "*",
     "babel-polyfill": "^6.26.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"

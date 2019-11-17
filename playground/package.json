@@ -1,7 +1,7 @@
 {
-  "name": "@agney/live-editor",
+  "name": "@agney/playground",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "scripts": {
     "start": "microbundle watch",
     "build": "microbundle"
@@ -11,7 +11,9 @@
   "module": "dist/editor.mjs",
   "unpkg": "dist/editor.umd.js",
   "keywords": [
-    "react"
+    "react",
+    "editor",
+    "playground"
   ],
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",

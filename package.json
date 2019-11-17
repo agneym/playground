@@ -1,9 +1,9 @@
 {
-  "name": "live-editor-workspace",
+  "name": "playground-workspace",
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "yarn workspace @agney/live-editor start",
+    "start": "yarn workspace @agney/playground start",
     "start-example": "yarn workspace example start"
   },
   "husky": {
@@ -12,7 +12,7 @@
     }
   },
   "workspaces": [
-    "live-editor",
+    "playground",
     "example"
   ],
   "devDependencies": {

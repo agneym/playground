@@ -18,7 +18,7 @@ interface IProps {
   defaultResultTab?: IResultTabs;
 }
 
-const LiveEditor: FC<IProps> = ({
+const Playground: FC<IProps> = ({
   initialSnippet,
   defaultEditorTab = "markup",
   defaultResultTab = "result",
@@ -46,4 +46,4 @@ const LiveEditor: FC<IProps> = ({
   );
 };
 
-export default LiveEditor;
+export default Playground;
