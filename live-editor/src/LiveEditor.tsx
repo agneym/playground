@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 import Editor from "./Editor";
 import Result from "./Result";
-import { ISnippet, IEditorTabs } from "./types";
+import { ISnippet, IEditorTabs, IResultTabs } from "./types";
 import theme from "./utils/theme";
 
 const Container = styled.div`
@@ -14,21 +14,32 @@ const Container = styled.div`
 
 interface IProps {
   initialSnippet: ISnippet;
+  defaultEditorTab?: IEditorTabs;
+  defaultResultTab?: IResultTabs;
 }
 
-const LiveEditor: FC<IProps> = ({ initialSnippet }) => {
+const LiveEditor: FC<IProps> = ({
+  initialSnippet,
+  defaultEditorTab = "markup",
+  defaultResultTab = "result",
+}) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
-  console.log(snippet);
+
   const onSnippetChange = (changed: string, type: IEditorTabs) => {
     setSnippet(snippet => ({
       ...snippet,
       [type]: changed,
     }));
   };
+
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Editor code={snippet} onChange={onSnippetChange} />
+        <Editor
+          code={snippet}
+          defaultTab={defaultEditorTab}
+          onChange={onSnippetChange}
+        />
         <Result snippet={snippet} />
       </Container>
     </ThemeProvider>

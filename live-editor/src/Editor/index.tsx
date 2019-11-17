@@ -18,10 +18,11 @@ const TabContainer = styled(StyledTabs)`
 
 interface IProps {
   code: ISnippet;
+  defaultTab: IEditorTabs;
   onChange: (changed: string, type: IEditorTabs) => void;
 }
 
-const Editor: FC<IProps> = ({ code, onChange }) => {
+const Editor: FC<IProps> = ({ code, defaultTab, onChange }) => {
   const tabs: Readonly<ITabConfig<IEditorTabs>[]> = useMemo(
     () => [
       { name: "HTML", value: "markup" },
@@ -31,7 +32,9 @@ const Editor: FC<IProps> = ({ code, onChange }) => {
     []
   );
   return (
-    <TabContainer>
+    <TabContainer
+      defaultIndex={tabs.findIndex(tab => tab.value === defaultTab)}
+    >
       <StyledTabList>
         {tabs.map(tab => (
           <StyledTab key={tab.value}>{tab.name}</StyledTab>
