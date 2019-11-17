@@ -1,8 +1,14 @@
 import React, { FC, useMemo, useState, memo, Fragment } from "react";
+import styled from "styled-components";
 
 import { ISnippet } from "../types";
 import constructSnippet from "../utils/constructSnippet";
 import ErrorDisplay from "./ErrorDisplay";
+
+const Container = styled.div`
+  position: relative;
+  height: 100%;
+`;
 
 interface IProps {
   id: string;
@@ -24,7 +30,7 @@ const Frame: FC<IProps> = memo(({ id, snippet }) => {
   }, [snippet]);
 
   return (
-    <Fragment>
+    <Container>
       <iframe
         height="100%"
         width="100%"
@@ -33,7 +39,7 @@ const Frame: FC<IProps> = memo(({ id, snippet }) => {
         srcDoc={code}
       />
       {error && <ErrorDisplay error={error} />}
-    </Fragment>
+    </Container>
   );
 });
 
