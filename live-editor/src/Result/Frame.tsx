@@ -1,4 +1,4 @@
-import React, { FC, useMemo, useState, memo, Fragment } from "react";
+import React, { FC, useMemo, useState, memo } from "react";
 import styled from "styled-components";
 
 import { ISnippet } from "../types";

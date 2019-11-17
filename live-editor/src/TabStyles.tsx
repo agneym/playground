@@ -8,7 +8,7 @@ export const StyledTabs = styled(Tabs)`
 `;
 
 export const StyledTabList = styled(TabList)`
-  border-bottom: 0.1em solid rgba(0, 0, 0, 0.1);
+  border-bottom: ${props => props.theme.tabs.tabHeader.borderBottom};
   padding: 0 0.8em;
 `;
 

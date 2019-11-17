@@ -6,5 +6,10 @@ declare module "styled-components" {
       background: string;
       color: string;
     };
+    tabs: {
+      tabHeader: {
+        borderBottom: string;
+      };
+    };
   }
 }
