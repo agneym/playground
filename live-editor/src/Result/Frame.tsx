@@ -2,6 +2,7 @@ import React, { FC, useMemo, useState, memo, Fragment } from "react";
 
 import { ISnippet } from "../types";
 import constructSnippet from "../utils/constructSnippet";
+import ErrorDisplay from "./ErrorDisplay";
 
 interface IProps {
   id: string;
@@ -31,7 +32,7 @@ const Frame: FC<IProps> = memo(({ id, snippet }) => {
         frameBorder="0"
         srcDoc={code}
       />
-      {error && <p>{error.message}</p>}
+      {error && <ErrorDisplay error={error} />}
     </Fragment>
   );
 });
