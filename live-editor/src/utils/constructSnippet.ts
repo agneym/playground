@@ -29,7 +29,7 @@ function constructSnippet({ markup, css, javascript }: ISnippet, id: string) {
           _privateLog.apply(console, arguments);
         }
       </script>
-      <script>
+      <script type="module">
         ${javascript}
       </script>
     </body>
