@@ -7,9 +7,9 @@ import { ISnippet, IEditorTabs } from "./types";
 import theme from "./utils/theme";
 
 const Container = styled.div`
-  border: 0.1em solid rgba(0, 0, 0, 0.3);
+  border: ${props => props.theme.container.border};
   display: flex;
-  min-height: 20em;
+  min-height: ${props => props.theme.container.minHeight};
 `;
 
 const initialSnippet = {
