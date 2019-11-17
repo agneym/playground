@@ -1,4 +1,5 @@
 import { ISnippet } from "../types";
+import transformJs from "./transformJs";
 
 /**
  * Constructs snippet from individual html, css and js code.
@@ -30,7 +31,7 @@ function constructSnippet({ markup, css, javascript }: ISnippet, id: string) {
         }
       </script>
       <script type="module">
-        ${javascript}
+        ${transformJs(javascript)}
       </script>
     </body>
     </html>
