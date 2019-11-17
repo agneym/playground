@@ -13,6 +13,9 @@ const theme: DefaultTheme = {
     tabHeader: {
       borderBottom: "0.1em solid rgba(0, 0, 0, 0.1)",
     },
+    selectedTab: {
+      borderBottom: "0.1em solid rgb(0, 0, 0)",
+    },
   },
 };
 

@@ -14,6 +14,9 @@ declare module "styled-components" {
       tabHeader: {
         borderBottom: string;
       };
+      selectedTab: {
+        borderBottom: string;
+      };
     };
   }
 }

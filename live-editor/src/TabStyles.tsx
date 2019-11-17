@@ -20,7 +20,7 @@ export const StyledTab = styled(Tab)`
   cursor: pointer;
 
   &[data-selected] {
-    border-bottom: 0.1em solid #000000;
+    border-bottom: ${props => props.theme.tabs.selectedTab.borderBottom};
   }
 `;
 
