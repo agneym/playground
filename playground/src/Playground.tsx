@@ -20,6 +20,7 @@ interface IProps {
 }
 
 const Playground: FC<IProps> = ({
+  id,
   initialSnippet,
   defaultEditorTab = "markup",
   defaultResultTab = "result",
