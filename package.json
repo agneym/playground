@@ -5,6 +5,7 @@
   "scripts": {
     "start": "yarn workspace @agney/playground start",
     "start-example": "yarn workspace example start",
+    "build": "yarn workspace @agney/playground build",
     "test": "yarn workspace @agney/playground test"
   },
   "husky": {

@@ -95,6 +95,10 @@ ReactDOM.render(
 );
 ```
 
+## What about the bundle size?
+
+This component uses [Babel Standalone](https://babeljs.io/docs/en/babel-standalone) and it adds a considerable amount to the total bundle size. You can find the total size and time on [Bundle Phobia](https://bundlephobia.com/result?p=@agney/playground@0.1.0)
+
 ## Contributing
 
 > Soon.
