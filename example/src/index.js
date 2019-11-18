@@ -11,6 +11,7 @@ const App = () => {
   };
   return (
     <Playground
+      id="example"
       initialSnippet={snippet}
       defaultEditorTab="css"
       defaultResultTab="console"
