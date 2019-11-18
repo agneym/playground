@@ -9,6 +9,9 @@ const theme: DefaultTheme = {
     background: "#e74c3c",
     color: "#ffffff",
   },
+  console: {
+    background: "rgba(0, 0, 0, 1)",
+  },
   tabs: {
     tabHeader: {
       borderBottom: "0.1em solid rgba(0, 0, 0, 0.1)",

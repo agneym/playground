@@ -10,6 +10,9 @@ declare module "styled-components" {
       background: string;
       color: string;
     };
+    console: {
+      background: string;
+    };
     tabs: {
       tabHeader: {
         borderBottom: string;
