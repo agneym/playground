@@ -58,5 +58,12 @@
   },
   "jest": {
     "rootDir": "src"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BoyWithSilverWings/playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BoyWithSilverWings/playground/issues"
+  },
 }
