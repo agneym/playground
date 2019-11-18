@@ -2,6 +2,20 @@
 <h2 align="center">Playground</h2>
 <p align="center">
 <strong>A simple playground for HTML, CSS and JavaScript supporting module imports.</strong>
+<br>
+<a href="https://www.npmjs.com/package/@agney/playground">
+  <img src="https://badge.fury.io/js/%40agney%2Fplayground.svg" />
+</a>
+<img src="https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg">
+<a href="https://prettier.io">
+  <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+</a>
+<a href="https://travis-ci.org/BoyWithSilverWings/playground">
+  <img src="https://github.com/BoyWithSilverWings/playground/workflows/Node%20CI/badge.svg">
+</a>
+<a href="http://makeapullrequest.com">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
+</a>
 <br><br>
 
 **Playground** is a React component that runs entirely in the browser and does not require loading any third party sites.
@@ -101,7 +115,15 @@ This component uses [Babel Standalone](https://babeljs.io/docs/en/babel-standalo
 
 ## Contributing
 
-> Soon.
+This project makes use of [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) for development.
+
+1. Run `yarn` for installing dependencies.
+
+2. Run `yarn start` to start development on package.
+
+3. To start example, run `yarn start-example`.
+
+Pull Requests are Welcome. Please create an issue to discuss before making a feature or large change. Thank You :)
 
 ## Credits
 
