@@ -5,16 +5,23 @@ import Playground from "@agney/playground";
 
 const App = () => {
   const snippet = {
-    markup: `<h1>Content</h1>`,
-    css: `h1 {color: red}`,
-    javascript: `console.log('this')`,
+    markup: `<div id=app />`,
+    css: ``,
+    javascript: `import { h, Component, render } from 'preact';
+import htm from 'htm';
+
+const html = htm.bind(h);
+
+const app = html\`<div>Hello World from Playground!</div>\`
+
+render(app, document.getElementById('app'));
+    `,
   };
   return (
     <Playground
       id="example"
       initialSnippet={snippet}
-      defaultEditorTab="css"
-      defaultResultTab="console"
+      defaultEditorTab="javascript"
     />
   );
 };
