@@ -54,7 +54,46 @@ render(app, document.getElementById('app'));
 
 ## API
 
-> Soon.
+|      Props       |                                    description                                    | default  | required |
+| :--------------: | :-------------------------------------------------------------------------------: | :------: | :------: |
+|        id        |                        a unique identifier for the iFrame                         |          |   true   |
+|  initialSnippet  |                           Initial code to be displayed                            |          |   true   |
+| defaultEditorTab | Initial editor tab to be displyed. Possible values: "markup", "css", "javascript" | "markup" |  false   |
+| defaultResultTab | Initial tab on result panel to be displayed. Possible values: "console", "result" | "result" |  false   |
+
+### Format for initial snippet
+
+```js
+{
+  markup: `<h1>Title</h1>`,
+  css: `h1 { color: red }`,
+  javascript: `console.log("this")`
+}
+```
+
+### How does module imports work?
+
+If an NPM package exposes an endpoint for "module", then you can direcly import this package by it's name.
+
+```js
+import { format } from "date-fns";
+
+format(new Date(2014, 1, 11), "yyyy-MM-dd");
+```
+
+Unfortuantely, not all packages currently support this feature. You can search through an entire list of packages through [pika.dev](https://pika.dev).
+
+You can use community created packages to replicate the functionality. For eg. React would be:
+
+```js
+import React, { createElement } from "@pika/react";
+import ReactDOM from "@pika/react-dom";
+
+ReactDOM.render(
+  createElement("div", {}, "Hello World"),
+  document.getElementById("app")
+);
+```
 
 ## Contributing
 

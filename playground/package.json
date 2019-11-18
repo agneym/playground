@@ -1,11 +1,16 @@
 {
   "name": "@agney/playground",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
+  "private": false,
   "scripts": {
     "start": "microbundle watch",
-    "build": "microbundle",
-    "test": "jest"
+    "build": "microbundle --raw",
+    "test": "jest",
+    "release": "np"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "source": "src/Playground.tsx",
   "main": "dist/editor.js",
@@ -37,6 +42,7 @@
     "@types/styled-components": "^4.4.0",
     "jest": "^24.9.0",
     "microbundle": "^0.11.0",
+    "np": "^5.1.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
