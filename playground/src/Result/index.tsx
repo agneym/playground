@@ -12,12 +12,12 @@ import Console from "./Console";
 import Frame from "./Frame";
 
 interface IProps {
+  id: string;
   snippet: ISnippet;
   defaultTab: IResultTabs;
 }
 
-const Result: FC<IProps> = ({ snippet, defaultTab }) => {
-  const id = "example";
+const Result: FC<IProps> = ({ id, snippet, defaultTab }) => {
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
     () => [

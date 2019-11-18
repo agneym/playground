@@ -13,6 +13,7 @@ const Container = styled.div`
 `;
 
 interface IProps {
+  id: string;
   initialSnippet: ISnippet;
   defaultEditorTab?: IEditorTabs;
   defaultResultTab?: IResultTabs;
@@ -40,7 +41,7 @@ const Playground: FC<IProps> = ({
           defaultTab={defaultEditorTab}
           onChange={onSnippetChange}
         />
-        <Result snippet={snippet} defaultTab={defaultResultTab} />
+        <Result id={id} snippet={snippet} defaultTab={defaultResultTab} />
       </Container>
     </ThemeProvider>
   );

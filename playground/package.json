@@ -23,6 +23,7 @@
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.2",
@@ -48,5 +49,8 @@
     "react-inspector": "^4.0.0",
     "react-simple-code-editor": "^0.10.0",
     "styled-components": "^4.4.1"
+  },
+  "jest": {
+    "rootDir": "src"
   }
 }
