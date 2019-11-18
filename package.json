@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn workspace @agney/playground start",
-    "start-example": "yarn workspace example start"
+    "start-example": "yarn workspace example start",
+    "test": "yarn workspace @agney/playground test"
   },
   "husky": {
     "hooks": {

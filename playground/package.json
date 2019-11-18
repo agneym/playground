@@ -4,7 +4,8 @@
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "scripts": {
     "start": "microbundle watch",
-    "build": "microbundle"
+    "build": "microbundle",
+    "test": "jest"
   },
   "source": "src/Playground.tsx",
   "main": "dist/editor.js",
@@ -22,6 +23,9 @@
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.2",
     "@testing-library/jest-dom": "^4.2.3",
     "@testing-library/react": "^9.3.2",
     "@types/jest": "^24.0.22",
