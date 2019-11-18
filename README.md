@@ -1,8 +1,10 @@
-# Playground
+<p align="center"><img src="./assets/icon.png"></p>
+<h2 align="center">Playground</h2>
+<p align="center">
+<strong>A simple playground for HTML, CSS and JavaScript supporting module imports.</strong>
+<br><br>
 
-A simple playground for HTML, CSS and JavaScript supporting module imports.
-
-This is a React component that runs entirely in the browser and requires loading of no third party sites.
+**Playground** is a React component that runs entirely in the browser and does not require loading any third party sites.
 
 ## Usage
 
@@ -49,3 +51,7 @@ const App = () => {
 ## Contributing
 
 > Soon.
+
+## Credits
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
