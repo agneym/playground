@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Editor from "../Editor";
+import { ThemeProvider } from "styled-components";
+import theme from "../utils/theme";
 
 const initialSnippet = {
   markup: ``,
@@ -12,13 +14,15 @@ describe("Editor", () => {
   it("should render the default tab as per prop", () => {
     const defaultTab = "css";
     const { getByText } = render(
-      <Editor
-        code={initialSnippet}
-        defaultTab={defaultTab}
-        onChange={() => {}}
-      />
+      <ThemeProvider theme={theme}>
+        <Editor
+          code={initialSnippet}
+          defaultTab={defaultTab}
+          onChange={() => {}}
+        />
+      </ThemeProvider>
     );
-    const button = getByText(defaultTab);
+    const button = getByText("CSS");
     expect(button.getAttribute("data-selected")).toBe("");
   });
 });
