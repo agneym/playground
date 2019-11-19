@@ -6,17 +6,18 @@
 <a href="https://www.npmjs.com/package/@agney/playground">
   <img src="https://badge.fury.io/js/%40agney%2Fplayground.svg" />
 </a>
-<img src="https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg">
-<a href="https://prettier.io">
-  <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+<img src="https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg" />
+<br />
+<a href="https://github.com/BoyWithSilverWings/playground/actions">
+  <img src="https://github.com/BoyWithSilverWings/playground/workflows/Node%20CI/badge.svg" />
 </a>
-<a href="https://travis-ci.org/BoyWithSilverWings/playground">
-  <img src="https://github.com/BoyWithSilverWings/playground/workflows/Node%20CI/badge.svg">
+<a href="https://prettier.io">
+  <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" />
 </a>
 <a href="http://makeapullrequest.com">
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
 </a>
-<br><br>
+<br>
 
 **Playground** is a React component that runs entirely in the browser and does not require loading any third party sites.
 
