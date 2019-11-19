@@ -19,7 +19,7 @@
 </a>
 <br>
 
-**Playground** is a React component that runs entirely in the browser and does not require loading any third party sites.
+**Playground** is a HTML, CSS and JS demonstration component that runs entirely in the browser and does not require loading any third party sites.
 
 ## Usage
 
