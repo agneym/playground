@@ -14,12 +14,17 @@
   },
   "source": "src/Playground.tsx",
   "main": "dist/editor.js",
-  "module": "dist/editor.mjs",
+  "module": "dist/editor.module.js",
+  "umd:main": "dist/editor.umd.js",
   "unpkg": "dist/editor.umd.js",
   "keywords": [
     "react",
     "editor",
     "playground"
+  ],
+  "files": [
+    "src",
+    "dist"
   ],
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
