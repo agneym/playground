@@ -38,7 +38,10 @@ const Result: FC<IProps> = ({
     function waitForMessage() {
       if (typeof window !== "undefined") {
         window.addEventListener("message", data => {
-          if (data.data.source === `frame-${id}`) {
+          if (
+            data.data.source === `frame-${id}` &&
+            data.data.message.type === "log"
+          ) {
             setLogs(prevLogs => [...prevLogs, ...data.data.message]);
           }
         });

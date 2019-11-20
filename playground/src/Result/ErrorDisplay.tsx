@@ -11,13 +11,13 @@ const Container = styled.div`
 `;
 
 interface IProps {
-  error: Error;
+  error: string;
 }
 
 const ErrorDisplay: FC<IProps> = ({ error }) => {
   return (
     <Container>
-      <p>{error.message}</p>
+      <p>{error}</p>
     </Container>
   );
 };

@@ -1,4 +1,4 @@
-import React, { FC, useMemo, useState, memo } from "react";
+import React, { FC, useMemo, useState, memo, useEffect } from "react";
 import styled from "styled-components";
 
 import { ISnippet } from "../types";
@@ -19,7 +19,7 @@ interface IProps {
 
 const Frame: FC<IProps> = memo(({ id, snippet, transformJs, presets }) => {
   const [code, setCode] = useState("");
-  const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useMemo(() => {
     try {
@@ -30,6 +30,22 @@ const Frame: FC<IProps> = memo(({ id, snippet, transformJs, presets }) => {
       setError(err);
     }
   }, [snippet, transformJs]);
+
+  useEffect(() => {
+    function waitForMessage() {
+      if (typeof window !== "undefined") {
+        window.addEventListener("message", data => {
+          if (
+            data.data.source === `frame-${id}` &&
+            data.data.message.type === "error"
+          ) {
+            setError(data.data.message.data);
+          }
+        });
+      }
+    }
+    waitForMessage();
+  }, [id]);
 
   return (
     <Container>

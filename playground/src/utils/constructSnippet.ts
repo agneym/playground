@@ -96,10 +96,24 @@ function constructSnippet(
           if(typeof window !== 'undefined') {
             window.parent.postMessage({
               source: "frame-${id}",
-              message: rest,
+              message: {
+                type: "log",
+                data: rest
+              },
             }, "*");
           }
           _privateLog.apply(console, arguments);
+        }
+        window.onerror = function(message) {
+          if(typeof window !== 'undefined') {
+            window.parent.postMessage({
+              source: "frame-${id}",
+              message: {
+                type: "error",
+                data: message
+              },
+            }, "*");
+          }
         }
       </script>
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
