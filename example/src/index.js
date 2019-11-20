@@ -23,6 +23,7 @@ render(app, document.getElementById('app'));
       initialSnippet={snippet}
       defaultEditorTab="javascript"
       transformJs
+      presets={["react"]}
     />
   );
 };

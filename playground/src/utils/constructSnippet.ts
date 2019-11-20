@@ -6,7 +6,8 @@ import { ISnippet } from "../types";
 function constructSnippet(
   { markup, css, javascript }: ISnippet,
   id: string,
-  transformJs: boolean
+  transformJs: boolean,
+  presets: string[]
 ) {
   function constructJavaScript() {
     if (transformJs) {
@@ -60,6 +61,7 @@ function constructSnippet(
             javascript
           )}\`), {
             plugins: ['unpkg'],
+            presets: ${JSON.stringify(presets)}  
           }).code;
           const script = document.createElement("script");
           script.type = "module";

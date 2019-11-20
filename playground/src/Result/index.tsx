@@ -16,9 +16,16 @@ interface IProps {
   snippet: ISnippet;
   defaultTab: IResultTabs;
   transformJs: boolean;
+  presets: string[];
 }
 
-const Result: FC<IProps> = ({ id, snippet, defaultTab, transformJs }) => {
+const Result: FC<IProps> = ({
+  id,
+  snippet,
+  presets,
+  defaultTab,
+  transformJs,
+}) => {
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
     () => [
@@ -48,7 +55,12 @@ const Result: FC<IProps> = ({ id, snippet, defaultTab, transformJs }) => {
       </StyledTabList>
       <StyledTabPanels>
         <StyledTabPanel>
-          <Frame id={id} snippet={snippet} transformJs={transformJs} />
+          <Frame
+            id={id}
+            snippet={snippet}
+            transformJs={transformJs}
+            presets={presets}
+          />
         </StyledTabPanel>
         <StyledTabPanel>
           <Console logs={logs} />

@@ -18,6 +18,7 @@ interface IProps {
   defaultEditorTab?: IEditorTabs;
   defaultResultTab?: IResultTabs;
   transformJs?: boolean;
+  presets?: string[];
 }
 
 const Playground: FC<IProps> = ({
@@ -26,6 +27,7 @@ const Playground: FC<IProps> = ({
   defaultEditorTab = "markup",
   defaultResultTab = "result",
   transformJs = false,
+  presets = [],
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
 
@@ -49,6 +51,7 @@ const Playground: FC<IProps> = ({
           snippet={snippet}
           defaultTab={defaultResultTab}
           transformJs={transformJs}
+          presets={presets}
         />
       </Container>
     </ThemeProvider>

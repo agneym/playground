@@ -14,15 +14,16 @@ interface IProps {
   id: string;
   snippet: ISnippet;
   transformJs: boolean;
+  presets: string[];
 }
 
-const Frame: FC<IProps> = memo(({ id, snippet, transformJs }) => {
+const Frame: FC<IProps> = memo(({ id, snippet, transformJs, presets }) => {
   const [code, setCode] = useState("");
   const [error, setError] = useState<Error | null>(null);
 
   useMemo(() => {
     try {
-      const code = constructSnippet(snippet, id, transformJs);
+      const code = constructSnippet(snippet, id, transformJs, presets);
       setCode(code);
       setError(null);
     } catch (err) {
