@@ -1,5 +1,3 @@
-import BabelPluginUnpkg from "babel-plugin-unpkg";
-
 import { ISnippet } from "../types";
 
 /**
