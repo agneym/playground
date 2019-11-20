@@ -5,7 +5,7 @@ import { ISnippet } from "../types";
  */
 function constructSnippet(
   { markup, css, javascript }: ISnippet,
-  id: string,
+  id: string | number,
   transformJs: boolean,
   presets: string[]
 ) {

@@ -7,7 +7,7 @@
     "start": "microbundle watch",
     "build": "microbundle --raw",
     "test": "jest",
-    "prepublish": "yarn build",
+    "prepublishOnly": "yarn build",
     "release": "np"
   },
   "publishConfig": {
@@ -53,6 +53,7 @@
     "react-dom": "^16.11.0"
   },
   "dependencies": {
+    "@reach/auto-id": "^0.6.1",
     "@reach/tabs": "^0.6.1",
     "lodash": "^4.17.15",
     "prism-react-renderer": "^1.0.2",

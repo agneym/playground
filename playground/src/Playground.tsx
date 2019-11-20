@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { useId } from "@reach/auto-id";
 
 import Editor from "./Editor";
 import Result from "./Result";
@@ -13,16 +14,16 @@ const Container = styled.div`
 `;
 
 interface IProps {
-  id: string;
   initialSnippet: ISnippet;
   defaultEditorTab?: IEditorTabs;
   defaultResultTab?: IResultTabs;
   transformJs?: boolean;
   presets?: string[];
+  id?: string;
 }
 
 const Playground: FC<IProps> = ({
-  id,
+  id: userId,
   initialSnippet,
   defaultEditorTab = "markup",
   defaultResultTab = "result",
@@ -30,6 +31,8 @@ const Playground: FC<IProps> = ({
   presets = [],
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
+
+  const id = useId(userId);
 
   const onSnippetChange = (changed: string, type: IEditorTabs) => {
     setSnippet(snippet => ({

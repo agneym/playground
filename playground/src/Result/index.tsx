@@ -12,7 +12,7 @@ import Console from "./Console";
 import Frame from "./Frame";
 
 interface IProps {
-  id: string;
+  id: string | number;
   snippet: ISnippet;
   defaultTab: IResultTabs;
   transformJs: boolean;

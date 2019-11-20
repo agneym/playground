@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 interface IProps {
-  id: string;
+  id: string | number;
   snippet: ISnippet;
   transformJs: boolean;
   presets: string[];
