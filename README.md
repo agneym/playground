@@ -39,8 +39,7 @@ const html = htm.bind(h);
 
 const app = html\`<div>Hello World from Playground!</div>\`
 
-render(app, document.getElementById('app'));
-    `,
+render(app, document.getElementById('app'));`,
   };
   return (
     <Playground
@@ -114,9 +113,9 @@ ReactDOM.render(
 
 ## What about the bundle size?
 
-The component is fairly small at about 53kB GZipped. You can find the total size and time on [Bundle Phobia](https://bundlephobia.com/result?p=@agney/playground).
+The component is fairly small at about ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@agney/playground). You can find the total size and time on [Bundle Phobia](https://bundlephobia.com/result?p=@agney/playground).
 
-When transforming JavaScript it uses [Babel Standalone](https://babeljs.io/docs/en/babel-standalone) which adds a considerable size to be loaded from CDN on the iFrame.
+When transforming JavaScript it uses [Babel Standalone](https://babeljs.io/docs/en/babel-standalone) which adds a considerable size. Playground loads Babel from a CDN so that it can be loaded from browser cache on change.
 
 It uses [Chrome's Native Lazy Loading](https://web.dev/native-lazy-loading/) so that the iframes for results are loaded lazily and your pages remain fast.
 
@@ -130,7 +129,7 @@ This project makes use of [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/wor
 
 3. To start example, run `yarn start-example`.
 
-Pull Requests are Welcome. Please create an issue to discuss before making a feature or large change. Thank You :)
+Pull Requests are Welcome. Please create an issue to discuss before making a feature or large change. Thank You :smile:
 
 ## Credits
 
