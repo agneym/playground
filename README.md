@@ -47,6 +47,7 @@ render(app, document.getElementById('app'));
       id="example"
       initialSnippet={snippet}
       defaultEditorTab="javascript"
+      transformJs
     />
   );
 };
@@ -69,12 +70,13 @@ render(app, document.getElementById('app'));
 
 ## API
 
-|      Props       |                                    description                                    | default  | required |
-| :--------------: | :-------------------------------------------------------------------------------: | :------: | :------: |
-|        id        |                        a unique identifier for the iFrame                         |          |   true   |
-|  initialSnippet  |                           Initial code to be displayed                            |          |   true   |
-| defaultEditorTab | Initial editor tab to be displyed. Possible values: "markup", "css", "javascript" | "markup" |  false   |
-| defaultResultTab | Initial tab on result panel to be displayed. Possible values: "console", "result" | "result" |  false   |
+|      Props       |                                      description                                       | default  | required |
+| :--------------: | :------------------------------------------------------------------------------------: | :------: | :------: |
+|        id        |                           a unique identifier for the iFrame                           |          |   true   |
+|  initialSnippet  |                              Initial code to be displayed                              |          |   true   |
+| defaultEditorTab |   Initial editor tab to be displyed. Possible values: "markup", "css", "javascript"    | "markup" |  false   |
+| defaultResultTab |   Initial tab on result panel to be displayed. Possible values: "console", "result"    | "result" |  false   |
+|   transformJs    | Transform the JavaScript using Babel. This is required if you want bare module imports |  false   |  false   |
 
 ### Format for initial snippet
 
