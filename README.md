@@ -137,6 +137,7 @@ ReactDOM.render(
       initialSnippet={snippet}
       defaultEditorTab="javascript"
       transformJs
+      presets={["react"]}
     />
   );
 };
