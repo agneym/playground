@@ -114,7 +114,11 @@ ReactDOM.render(
 
 ## What about the bundle size?
 
-This component uses [Babel Standalone](https://babeljs.io/docs/en/babel-standalone) and it adds a considerable amount to the total bundle size. You can find the total size and time on [Bundle Phobia](https://bundlephobia.com/result?p=@agney/playground@0.1.0)
+The component is fairly small at about 53kB GZipped. You can find the total size and time on [Bundle Phobia](https://bundlephobia.com/result?p=@agney/playground).
+
+When transforming JavaScript it uses [Babel Standalone](https://babeljs.io/docs/en/babel-standalone) which adds a considerable size to be loaded from CDN on the iFrame.
+
+It uses [Chrome's Native Lazy Loading](https://web.dev/native-lazy-loading/) so that the iframes for results are loaded lazily and your pages remain fast.
 
 ## Contributing
 
