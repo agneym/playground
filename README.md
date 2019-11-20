@@ -71,13 +71,14 @@ render(app, document.getElementById('app'));`,
 
 ## API
 
-|      Props       |                                      description                                       | default  | required |
-| :--------------: | :------------------------------------------------------------------------------------: | :------: | :------: |
-|        id        |                           a unique identifier for the iFrame                           |          |   true   |
-|  initialSnippet  |                              Initial code to be displayed                              |          |   true   |
-| defaultEditorTab |   Initial editor tab to be displyed. Possible values: "markup", "css", "javascript"    | "markup" |  false   |
-| defaultResultTab |   Initial tab on result panel to be displayed. Possible values: "console", "result"    | "result" |  false   |
-|   transformJs    | Transform the JavaScript using Babel. This is required if you want bare module imports |  false   |  false   |
+|      Props       |                                                  description                                                  | default  | required |
+| :--------------: | :-----------------------------------------------------------------------------------------------------------: | :------: | :------: |
+|        id        |                                      a unique identifier for the iFrame                                       |          |   true   |
+|  initialSnippet  |                                         Initial code to be displayed                                          |          |   true   |
+| defaultEditorTab |               Initial editor tab to be displyed. Possible values: "markup", "css", "javascript"               | "markup" |  false   |
+| defaultResultTab |               Initial tab on result panel to be displayed. Possible values: "console", "result"               | "result" |  false   |
+|   transformJs    |            Transform the JavaScript using Babel. This is required if you want bare module imports             |  false   |  false   |
+|     presets      | Array of presets you want Babel to transform. This works only if transformJs is true. Eg. ["react", "es2015"] |          |  false   |
 
 ### Format for initial snippet
 
@@ -111,6 +112,34 @@ ReactDOM.render(
   createElement("div", {}, "Hello World"),
   document.getElementById("app")
 );
+```
+
+## How do I demo React code with JSX?
+
+```jsx
+import Playground from "@agney/playground";
+
+const App = () => {
+  const snippet = {
+    markup: `<div id=app />`,
+    css: ``,
+    javascript: `import React, { createElement } from "@pika/react";
+import ReactDOM from "@pika/react-dom";
+
+ReactDOM.render(
+  <h1>Hello World</h1>,
+  document.getElementById("app")
+);`,
+  };
+  return (
+    <Playground
+      id="example"
+      initialSnippet={snippet}
+      defaultEditorTab="javascript"
+      transformJs
+    />
+  );
+};
 ```
 
 ## What about the bundle size?
