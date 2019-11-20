@@ -22,6 +22,7 @@ render(app, document.getElementById('app'));
       id="example"
       initialSnippet={snippet}
       defaultEditorTab="javascript"
+      transformJs
     />
   );
 };

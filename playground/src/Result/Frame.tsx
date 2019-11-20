@@ -13,21 +13,22 @@ const Container = styled.div`
 interface IProps {
   id: string;
   snippet: ISnippet;
+  transformJs: boolean;
 }
 
-const Frame: FC<IProps> = memo(({ id, snippet }) => {
+const Frame: FC<IProps> = memo(({ id, snippet, transformJs }) => {
   const [code, setCode] = useState("");
   const [error, setError] = useState<Error | null>(null);
 
   useMemo(() => {
     try {
-      const code = constructSnippet(snippet, id);
+      const code = constructSnippet(snippet, id, transformJs);
       setCode(code);
       setError(null);
     } catch (err) {
       setError(err);
     }
-  }, [snippet]);
+  }, [snippet, transformJs]);
 
   return (
     <Container>

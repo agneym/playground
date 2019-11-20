@@ -17,6 +17,7 @@ interface IProps {
   initialSnippet: ISnippet;
   defaultEditorTab?: IEditorTabs;
   defaultResultTab?: IResultTabs;
+  transformJs?: boolean;
 }
 
 const Playground: FC<IProps> = ({
@@ -24,6 +25,7 @@ const Playground: FC<IProps> = ({
   initialSnippet,
   defaultEditorTab = "markup",
   defaultResultTab = "result",
+  transformJs = false,
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
 
@@ -42,7 +44,12 @@ const Playground: FC<IProps> = ({
           defaultTab={defaultEditorTab}
           onChange={onSnippetChange}
         />
-        <Result id={id} snippet={snippet} defaultTab={defaultResultTab} />
+        <Result
+          id={id}
+          snippet={snippet}
+          defaultTab={defaultResultTab}
+          transformJs={transformJs}
+        />
       </Container>
     </ThemeProvider>
   );
