@@ -1,6 +1,6 @@
 {
   "name": "@agney/playground",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
   "scripts": {
@@ -47,9 +47,7 @@
     "react-dom": "^16.11.0"
   },
   "dependencies": {
-    "@babel/standalone": "^7.7.3",
     "@reach/tabs": "^0.5.4",
-    "babel-plugin-unpkg": "^1.0.0",
     "lodash": "^4.17.15",
     "prism-react-renderer": "^1.0.2",
     "react-inspector": "^4.0.0",
