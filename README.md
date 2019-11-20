@@ -58,14 +58,16 @@ render(app, document.getElementById('app'));`,
 
 ## Features
 
-1. Autoreloading preview for change
-2. Can load preview for predefined code.
-3. Allows for ES module imports. This means you can add imports for any library that supports ES Module resolution and playground will automatically load it into your code.
+1. Load preview for predefined code.
+1. Autoreloading preview for change.
+1. Allows for ES module imports. This means you can add imports for any library that supports ES Module resolution and playground will automatically load it into your code.
+1. See console output in the component itself.
+1. Control tab loaded by default for your use-case.
 
 ## Applications
 
 1. Add to static blogs to present your HTML, CSS or JavaScript code.
-2. Allow users to change the code and see the output in real time. This could be big in educational articles and so.
+1. Allow users to change the code and see the output in real time. This could be big in educational articles and so.
 
 ## API
 
