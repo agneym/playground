@@ -38,6 +38,7 @@ const Frame: FC<IProps> = memo(({ id, snippet, transformJs }) => {
         title={"example"}
         frameBorder="0"
         srcDoc={code}
+        loading="lazy"
       />
       {error && <ErrorDisplay error={error} />}
     </Container>
