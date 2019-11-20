@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { render } from "react-dom";
 import "babel-polyfill";
 import Playground from "@agney/playground";
@@ -18,13 +18,26 @@ render(app, document.getElementById('app'));
     `,
   };
   return (
-    <Playground
-      id="example"
-      initialSnippet={snippet}
-      defaultEditorTab="javascript"
-      transformJs
-      presets={["react"]}
-    />
+    <Fragment>
+      <Playground
+        initialSnippet={snippet}
+        defaultEditorTab="javascript"
+        transformJs
+        presets={["react"]}
+      />
+      <Playground
+        initialSnippet={snippet}
+        defaultEditorTab="javascript"
+        transformJs
+        presets={["react"]}
+      />
+      <Playground
+        initialSnippet={snippet}
+        defaultEditorTab="javascript"
+        transformJs
+        presets={["react"]}
+      />
+    </Fragment>
   );
 };
 

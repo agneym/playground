@@ -49,13 +49,15 @@ const Playground: FC<IProps> = ({
           defaultTab={defaultEditorTab}
           onChange={onSnippetChange}
         />
-        <Result
-          id={id}
-          snippet={snippet}
-          defaultTab={defaultResultTab}
-          transformJs={transformJs}
-          presets={presets}
-        />
+        {id && (
+          <Result
+            id={id}
+            snippet={snippet}
+            defaultTab={defaultResultTab}
+            transformJs={transformJs}
+            presets={presets}
+          />
+        )}
       </Container>
     </ThemeProvider>
   );

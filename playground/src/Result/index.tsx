@@ -42,7 +42,7 @@ const Result: FC<IProps> = ({
             data.data.source === `frame-${id}` &&
             data.data.message.type === "log"
           ) {
-            setLogs(prevLogs => [...prevLogs, ...data.data.message]);
+            setLogs(prevLogs => [...prevLogs, ...data.data.message.data]);
           }
         });
       }
