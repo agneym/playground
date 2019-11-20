@@ -1,12 +1,13 @@
 {
   "name": "@agney/playground",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
   "scripts": {
     "start": "microbundle watch",
     "build": "microbundle --raw",
     "test": "jest",
+    "prepublish": "yarn build",
     "release": "np"
   },
   "publishConfig": {
