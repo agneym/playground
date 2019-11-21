@@ -115,7 +115,7 @@ ReactDOM.render(
 );
 ```
 
-## How do I demo React code with JSX?
+### How do I demo React code with JSX?
 
 ```jsx
 import Playground from "@agney/playground";

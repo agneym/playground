@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { render } from "react-dom";
 import "babel-polyfill";
-import Playground, { theme } from "@agney/playground";
+import Playground from "@agney/playground";
 
 const App = () => {
   const snippet = {
