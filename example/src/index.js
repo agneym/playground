@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import { render } from "react-dom";
 import "babel-polyfill";
-import Playground from "@agney/playground";
+import Playground, { theme } from "@agney/playground";
 
 const App = () => {
+  console.log(theme);
   const snippet = {
     markup: `<div id=app />`,
     css: ``,
@@ -19,18 +20,6 @@ render(app, document.getElementById('app'));
   };
   return (
     <Fragment>
-      <Playground
-        initialSnippet={snippet}
-        defaultEditorTab="javascript"
-        transformJs
-        presets={["react"]}
-      />
-      <Playground
-        initialSnippet={snippet}
-        defaultEditorTab="javascript"
-        transformJs
-        presets={["react"]}
-      />
       <Playground
         initialSnippet={snippet}
         defaultEditorTab="javascript"

@@ -1,11 +1,11 @@
 import React, { FC, useState } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider, DefaultTheme } from "styled-components";
 import { useId } from "@reach/auto-id";
 
 import Editor from "./Editor";
 import Result from "./Result";
 import { ISnippet, IEditorTabs, IResultTabs } from "./types";
-import theme from "./utils/theme";
+import ourTheme from "./utils/theme";
 
 const Container = styled.div`
   border: ${props => props.theme.container.border};
@@ -20,6 +20,7 @@ interface IProps {
   transformJs?: boolean;
   presets?: string[];
   id?: string;
+  theme?: DefaultTheme;
 }
 
 const Playground: FC<IProps> = ({
@@ -29,6 +30,7 @@ const Playground: FC<IProps> = ({
   defaultResultTab = "result",
   transformJs = false,
   presets = [],
+  theme = ourTheme,
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
 
@@ -63,4 +65,4 @@ const Playground: FC<IProps> = ({
   );
 };
 
-export default Playground;
+export { ourTheme as theme, Playground as default };
