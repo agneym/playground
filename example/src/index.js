@@ -4,7 +4,6 @@ import "babel-polyfill";
 import Playground, { theme } from "@agney/playground";
 
 const App = () => {
-  console.log(theme);
   const snippet = {
     markup: `<div id=app />`,
     css: ``,
