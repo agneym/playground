@@ -59,8 +59,8 @@ render(app, document.getElementById('app'));`,
 ## Features
 
 1. Load preview for predefined code.
-1. Autoreloading preview for change.
-1. Allows for ES module imports. This means you can add imports for any library that supports ES Module resolution and playground will automatically load it into your code.
+1. Autoreloading preview.
+1. Allows bare ES package imports. This means you can add imports for any library that supports ES Module resolution and playground will automatically load it into your code.
 1. See console output in the component itself.
 1. Control tab loaded by default for your use-case.
 
@@ -71,14 +71,14 @@ render(app, document.getElementById('app'));`,
 
 ## API
 
-|      Props       |                                                  description                                                  | default  | required |
-| :--------------: | :-----------------------------------------------------------------------------------------------------------: | :------: | :------: |
-|        id        |                                      a unique identifier for the iFrame                                       |          |   true   |
-|  initialSnippet  |                                         Initial code to be displayed                                          |          |   true   |
-| defaultEditorTab |               Initial editor tab to be displyed. Possible values: "markup", "css", "javascript"               | "markup" |  false   |
-| defaultResultTab |               Initial tab on result panel to be displayed. Possible values: "console", "result"               | "result" |  false   |
-|   transformJs    |            Transform the JavaScript using Babel. This is required if you want bare module imports             |  false   |  false   |
-|     presets      | Array of presets you want Babel to transform. This works only if transformJs is true. Eg. ["react", "es2015"] |          |  false   |
+|      Props       |                                                   description                                                   | default  | required |
+| :--------------: | :-------------------------------------------------------------------------------------------------------------: | :------: | :------: |
+|        id        |                                       a unique identifier for the iFrame                                        |          |   true   |
+|  initialSnippet  |                                          Initial code to be displayed                                           |          |   true   |
+| defaultEditorTab |                Initial editor tab to be displyed. Possible values: "markup", "css", "javascript"                | "markup" |  false   |
+| defaultResultTab |                Initial tab on result panel to be displayed. Possible values: "console", "result"                | "result" |  false   |
+|   transformJs    |             Transform the JavaScript using Babel. This is required if you want bare module imports              |  false   |  false   |
+|     presets      | Array of presets you want Babel to transform. This works only if transformJs is true. Eg. `["react", "es2015"]` |          |  false   |
 
 ### Format for initial snippet
 
@@ -100,7 +100,7 @@ import { format } from "date-fns";
 format(new Date(2014, 1, 11), "yyyy-MM-dd");
 ```
 
-Unfortuantely, not all packages currently support this feature. You can search through an entire list of packages through [pika.dev](https://pika.dev).
+Unfortunately, not all packages currently support this feature. You can search through an entire list of packages through [pika.dev](https://pika.dev).
 
 You can use community created packages to replicate the functionality. For eg. React would be:
 
