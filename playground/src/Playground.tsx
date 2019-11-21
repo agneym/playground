@@ -65,4 +65,4 @@ const Playground: FC<IProps> = ({
   );
 };
 
-export { ourTheme as theme, Playground as default };
+export default Playground;
