@@ -9,6 +9,7 @@ import { IEditorTabs } from "../types";
 const StyledSimpleEditor = styled(SimpleEditor)`
   background-color: #000000;
   color: #ffffff;
+  overflow-y: scroll !important;
 `;
 
 interface IProps {

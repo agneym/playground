@@ -1,10 +1,16 @@
 import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 
+import media from "./utils/media";
+
 export const StyledTabs = styled(Tabs)`
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  ${media.phone`
+    width: 100%;
+  `}
 `;
 
 export const StyledTabList = styled(TabList)`
@@ -26,6 +32,10 @@ export const StyledTab = styled(Tab)`
 
 export const StyledTabPanels = styled(TabPanels)`
   flex: 1;
+
+  ${media.phone`
+    height: ${props => props.theme.tabs.tabPanel.phoneHeight};
+  `}
 `;
 
 export const StyledTabPanel = styled(TabPanel)`

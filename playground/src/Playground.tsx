@@ -6,11 +6,16 @@ import Editor from "./Editor";
 import Result from "./Result";
 import { ISnippet, IEditorTabs, IResultTabs } from "./types";
 import ourTheme from "./utils/theme";
+import media from "./utils/media";
 
 const Container = styled.div`
   border: ${props => props.theme.container.border};
   display: flex;
   min-height: ${props => props.theme.container.minHeight};
+
+  ${media.phone`
+    flex-direction: column;
+  `}
 `;
 
 interface IProps {

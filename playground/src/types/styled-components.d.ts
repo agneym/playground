@@ -17,6 +17,9 @@ declare module "styled-components" {
       tabHeader: {
         borderBottom: string;
       };
+      tabPanel: {
+        phoneHeight: string;
+      };
       selectedTab: {
         borderBottom: string;
       };
