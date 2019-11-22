@@ -27,7 +27,7 @@ const Frame: FC<IProps> = memo(({ id, snippet, transformJs, presets }) => {
       setCode(code);
       setError(null);
     } catch (err) {
-      setError(err);
+      setError(err.message);
     }
   }, [snippet, transformJs]);
 

@@ -21,7 +21,12 @@ describe("Frame", () => {
   it("should render error", () => {
     const { getByText } = render(
       <ThemeProvider theme={theme}>
-        <Frame id="thing" snippet={initialSnippet} />
+        <Frame
+          id="thing"
+          snippet={initialSnippet}
+          transformJs={false}
+          presets={[]}
+        />
       </ThemeProvider>
     );
     expect(getByText("error")).toBeDefined();
