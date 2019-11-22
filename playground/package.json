@@ -1,6 +1,6 @@
 {
   "name": "@agney/playground",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
   "scripts": {
