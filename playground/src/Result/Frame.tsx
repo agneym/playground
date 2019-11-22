@@ -21,6 +21,12 @@ const Frame: FC<IProps> = memo(({ id, snippet, transformJs, presets }) => {
   const [code, setCode] = useState("");
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (!(snippet.css && snippet.markup && snippet.javascript)) {
+      console.warn("Not provided with correct initial snippet");
+    }
+  }, []);
+
   useMemo(() => {
     try {
       const code = constructSnippet(snippet, id, transformJs, presets);
