@@ -134,7 +134,6 @@ ReactDOM.render(
   };
   return (
     <Playground
-      id="example"
       initialSnippet={snippet}
       defaultEditorTab="javascript"
       transformJs

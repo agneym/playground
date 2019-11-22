@@ -53,11 +53,11 @@
     "react-dom": "^16.11.0"
   },
   "dependencies": {
+    "@agney/react-inspector": "^4.0.0",
     "@reach/auto-id": "^0.6.1",
     "@reach/tabs": "^0.6.1",
     "lodash": "^4.17.15",
     "prism-react-renderer": "^1.0.2",
-    "react-inspector": "^4.0.0",
     "react-simple-code-editor": "^0.10.0",
     "styled-components": "^4.4.1"
   },
