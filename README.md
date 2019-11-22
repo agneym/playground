@@ -54,7 +54,7 @@ render(app, document.getElementById('app'));`,
 
 ## Demo
 
-> Soon
+https://blog.agney.dev/introducing-playground/
 
 ## Features
 
