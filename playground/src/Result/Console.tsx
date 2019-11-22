@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import Inspector from "react-inspector";
+import Inspector from "@agney/react-inspector";
 
 const Container = styled.div`
   background-color: ${props => props.theme.console.background};
