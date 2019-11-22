@@ -8,8 +8,8 @@
 </a>
 <img src="https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg" />
 <br />
-<a href="https://github.com/BoyWithSilverWings/playground/actions">
-  <img src="https://github.com/BoyWithSilverWings/playground/workflows/Node%20CI/badge.svg" />
+<a href="https://github.com/agneym/playground/actions">
+  <img src="https://github.com/agneym/playground/workflows/Node%20CI/badge.svg" />
 </a>
 <a href="https://prettier.io">
   <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" />
@@ -71,15 +71,15 @@ render(app, document.getElementById('app'));`,
 
 ## API
 
-|      Props       |                                                   description                                                   |                                                 default                                                 | required |
-| :--------------: | :-------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :------: |
-|        id        |                                       a unique identifier for the iFrame                                        |                                                                                                         |   true   |
-|  initialSnippet  |                                          Initial code to be displayed                                           |                                                                                                         |   true   |
-| defaultEditorTab |                Initial editor tab to be displyed. Possible values: "markup", "css", "javascript"                |                                                "markup"                                                 |  false   |
-| defaultResultTab |                Initial tab on result panel to be displayed. Possible values: "console", "result"                |                                                "result"                                                 |  false   |
-|   transformJs    |             Transform the JavaScript using Babel. This is required if you want bare module imports              |                                                  false                                                  |  false   |
-|     presets      | Array of presets you want Babel to transform. This works only if transformJs is true. Eg. `["react", "es2015"]` |                                                                                                         |  false   |
-|      theme       |                             Pass in the theme variables to customise the appearance                             | [Our Theme](https://github.com/BoyWithSilverWings/playground/blob/master/playground/src/utils/theme.ts) |  false   |
+|      Props       |                                                   description                                                   |                                           default                                           | required |
+| :--------------: | :-------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :------: |
+|        id        |                                       a unique identifier for the iFrame                                        |                                                                                             |   true   |
+|  initialSnippet  |                                          Initial code to be displayed                                           |                                                                                             |   true   |
+| defaultEditorTab |                Initial editor tab to be displyed. Possible values: "markup", "css", "javascript"                |                                          "markup"                                           |  false   |
+| defaultResultTab |                Initial tab on result panel to be displayed. Possible values: "console", "result"                |                                          "result"                                           |  false   |
+|   transformJs    |             Transform the JavaScript using Babel. This is required if you want bare module imports              |                                            false                                            |  false   |
+|     presets      | Array of presets you want Babel to transform. This works only if transformJs is true. Eg. `["react", "es2015"]` |                                                                                             |  false   |
+|      theme       |                             Pass in the theme variables to customise the appearance                             | [Our Theme](https://github.com/agneym/playground/blob/master/playground/src/utils/theme.ts) |  false   |
 
 ### Format for initial snippet
 
