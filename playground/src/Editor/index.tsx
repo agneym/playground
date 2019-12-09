@@ -1,6 +1,5 @@
 import React, { FC, useMemo } from "react";
 import styled from "styled-components";
-
 import { IEditorTabs, ISnippet } from "../types";
 import EditorSetup from "./EditorSetup";
 import { ITabConfig } from "../types";
@@ -17,12 +16,13 @@ const TabContainer = styled(StyledTabs)`
 `;
 
 interface IProps {
+  width: number;
   code: ISnippet;
   defaultTab: IEditorTabs;
   onChange: (changed: string, type: IEditorTabs) => void;
 }
 
-const Editor: FC<IProps> = ({ code, defaultTab, onChange }) => {
+const Editor: FC<IProps> = ({ code, defaultTab, onChange, width }) => {
   const tabs: Readonly<ITabConfig<IEditorTabs>[]> = useMemo(
     () => [
       { name: "HTML", value: "markup" },
@@ -34,6 +34,7 @@ const Editor: FC<IProps> = ({ code, defaultTab, onChange }) => {
   return (
     <TabContainer
       defaultIndex={tabs.findIndex(tab => tab.value === defaultTab)}
+      style={{ width: width }}
     >
       <StyledTabList>
         {tabs.map(tab => (
