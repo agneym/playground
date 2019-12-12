@@ -31,7 +31,8 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
@@ -50,7 +51,8 @@
     "microbundle": "^0.11.0",
     "np": "^5.1.3",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1"
   },
   "dependencies": {
     "@agney/react-inspector": "^4.0.0",
@@ -58,8 +60,7 @@
     "@reach/tabs": "^0.6.1",
     "lodash": "^4.17.15",
     "prism-react-renderer": "^1.0.2",
-    "react-simple-code-editor": "^0.10.0",
-    "styled-components": "^4.4.1"
+    "react-simple-code-editor": "^0.10.0"
   },
   "jest": {
     "rootDir": "src"
