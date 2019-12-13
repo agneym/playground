@@ -62,7 +62,7 @@ https://blog.agney.dev/introducing-playground/
 1. Autoreloading preview.
 1. Allows bare ES package imports. This means you can add imports for any library that supports ES Module resolution and playground will automatically load it into your code.
 1. See console output in the component itself.
-1. Control tab loaded by default for your use-case.
+1. Control the tab loaded by default for your use-case.
 
 ## Applications
 
