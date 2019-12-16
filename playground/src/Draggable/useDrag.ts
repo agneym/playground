@@ -50,7 +50,7 @@ function useDrag({ containerRef, dividerRef, dividerWidth }: IProps) {
 
   return {
     leftWidth: width,
-    rightWidth: containerRect ? containerRect.width - width : 0,
+    rightWidth: containerRect ? containerRect.width - width - dividerWidth : 0,
   };
 }
 

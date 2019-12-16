@@ -4,13 +4,13 @@ import useDrag from "./useDrag";
 
 const Container = styled.div`
   display: flex;
+  align-items: stretch;
 `;
 
-const DIVIDER_WIDTH = 5;
+const DIVIDER_WIDTH = 3;
 
 const Divider = styled.div`
   width: ${DIVIDER_WIDTH}px;
-  height: 20rem;
   cursor: col-resize;
 `;
 
