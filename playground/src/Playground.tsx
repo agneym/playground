@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useCallback, useEffect, useRef } from "react";
 import styled, { ThemeProvider, DefaultTheme } from "styled-components";
 import { useId } from "@reach/auto-id";
 
@@ -16,6 +16,11 @@ const Container = styled.div`
   ${media.phone`
     flex-direction: column;
   `}
+
+  .divider {
+    border: 1px solid transparent;
+    cursor: col-resize;
+  }
 `;
 
 interface IProps {
@@ -38,8 +43,10 @@ const Playground: FC<IProps> = ({
   theme = ourTheme,
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
-
+  const [width, setWidth] = useState<number>(0);
+  const [containerWidth, setContainerWidth] = useState(0);
   const id = useId(userId);
+  const ref = useRef<HTMLDivElement>(null);
 
   const onSnippetChange = (changed: string, type: IEditorTabs) => {
     setSnippet(snippet => ({
@@ -48,22 +55,54 @@ const Playground: FC<IProps> = ({
     }));
   };
 
+  useEffect(() => {
+    if (ref.current) {
+      setContainerWidth(ref.current.clientWidth);
+      setWidth(ref.current.clientWidth / 2);
+    }
+  }, []);
+
+  const resize = useCallback(
+    (e: any) => {
+      const movedInPx = e.clientX - 10;
+      setWidth(movedInPx);
+    },
+    [setWidth]
+  );
+
+  const handleAddListener = useCallback(() => {
+    document.addEventListener("mousemove", resize, false);
+  }, []);
+
+  const handleRemoveListener = useCallback(() => {
+    document.removeEventListener("mousemove", resize, false);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <Container ref={ref}>
         <Editor
+          width={width}
           code={snippet}
           defaultTab={defaultEditorTab}
           onChange={onSnippetChange}
         />
         {id && (
-          <Result
-            id={id}
-            snippet={snippet}
-            defaultTab={defaultResultTab}
-            transformJs={transformJs}
-            presets={presets}
-          />
+          <>
+            <div
+              onMouseDown={handleAddListener}
+              onMouseUp={handleRemoveListener}
+              className="divider"
+            ></div>
+            <Result
+              width={containerWidth - width}
+              id={id}
+              snippet={snippet}
+              defaultTab={defaultResultTab}
+              transformJs={transformJs}
+              presets={presets}
+            />
+          </>
         )}
       </Container>
     </ThemeProvider>

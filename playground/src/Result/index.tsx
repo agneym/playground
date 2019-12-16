@@ -17,6 +17,7 @@ interface IProps {
   defaultTab: IResultTabs;
   transformJs: boolean;
   presets: string[];
+  width: number;
 }
 
 const Result: FC<IProps> = ({
@@ -25,6 +26,7 @@ const Result: FC<IProps> = ({
   presets,
   defaultTab,
   transformJs,
+  width,
 }) => {
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
@@ -50,7 +52,10 @@ const Result: FC<IProps> = ({
     waitForMessage();
   }, [id]);
   return (
-    <StyledTabs defaultIndex={tabs.findIndex(tab => tab.value === defaultTab)}>
+    <StyledTabs
+      defaultIndex={tabs.findIndex(tab => tab.value === defaultTab)}
+      style={{ width: width }}
+    >
       <StyledTabList>
         {tabs.map(tab => (
           <StyledTab key={tab.value}>{tab.name}</StyledTab>
