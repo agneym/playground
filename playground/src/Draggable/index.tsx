@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
 `;
 
-const DIVIDER_WIDTH = 4;
+const DIVIDER_WIDTH = 5;
 
 const Divider = styled.div`
   width: ${DIVIDER_WIDTH}px;
@@ -44,7 +44,6 @@ const Draggable: FC<IProps> = ({ className = "", leftChild, rightChild }) => {
   const keepDragging = useCallback(
     (event: MouseEvent) => {
       const { clientX } = event;
-      console.log("keep dragging", clientX);
       if (containerRect) {
         setWidth(clientX - containerRect.left);
       }
@@ -52,7 +51,6 @@ const Draggable: FC<IProps> = ({ className = "", leftChild, rightChild }) => {
     [containerRect]
   );
   const stopDrag = useCallback(() => {
-    console.log("stop dragging");
     document.removeEventListener("mousemove", keepDragging);
     document.removeEventListener("mouseup", stopDrag);
   }, [keepDragging]);
