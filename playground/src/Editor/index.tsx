@@ -11,7 +11,9 @@ import {
   StyledTabPanel,
 } from "../TabStyles";
 
-const TabContainer = styled(StyledTabs)``;
+const TabContainer = styled(StyledTabs)`
+  min-width: ${props => props.theme.container.minWidth};
+`;
 
 interface IProps {
   width: number;
