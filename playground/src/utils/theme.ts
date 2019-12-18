@@ -12,6 +12,10 @@ const theme: DefaultTheme = {
   console: {
     background: "rgba(0, 0, 0, 1)",
   },
+  divider: {
+    width: 2,
+    background: " #202020",
+  },
   tabs: {
     tabHeader: {
       borderBottom: "0.1em solid rgba(0, 0, 0, 0.1)",

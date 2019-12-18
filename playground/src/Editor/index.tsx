@@ -11,9 +11,7 @@ import {
   StyledTabPanel,
 } from "../TabStyles";
 
-const TabContainer = styled(StyledTabs)`
-  border-right: 0.05em solid rgba(0, 0, 0, 0.2);
-`;
+const TabContainer = styled(StyledTabs)``;
 
 interface IProps {
   width: number;
