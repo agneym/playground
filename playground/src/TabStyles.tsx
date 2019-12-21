@@ -7,6 +7,7 @@ export const StyledTabs = styled(Tabs)`
   display: flex;
   flex-direction: column;
   width: 50%;
+  min-width: ${props => props.theme.container.minWidth};
 
   ${media.phone`
     width: 100%;

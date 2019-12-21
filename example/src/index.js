@@ -22,6 +22,7 @@ render(app, document.getElementById('app'));
       <Playground
         initialSnippet={snippet}
         defaultEditorTab="javascript"
+        defaultResultTab="console"
         transformJs
         presets={["react"]}
       />
