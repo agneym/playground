@@ -23,7 +23,15 @@
 
 ## Usage
 
-Install from `npm` with `npm install @agney/playground` or `yarn add @agney/playground`
+Install from `npm` with:
+
+```
+npm install styled-components @agney/playground
+# OR
+yarn add styled-components @agney/playground
+```
+
+Playground uses [styled-components](https://styled-components.com/) for styling.
 
 ```jsx
 import Playground from "@agney/playground";
@@ -67,7 +75,7 @@ https://blog.agney.dev/introducing-playground/
 ## Applications
 
 1. Add to static blogs to present your HTML, CSS or JavaScript code.
-1. Allow users to change the code and see the output in real time. This could be big in educational articles and so.
+1. Allow users to change the code and see the output in real time.
 
 ## API
 
