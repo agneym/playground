@@ -15,7 +15,12 @@ const theme: DefaultTheme = {
   },
   divider: {
     width: 2,
-    background: " #202020",
+    background: "#202020",
+  },
+  editor: {
+    fontFamily: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
+    backgroundColor: `#000000`,
+    color: `#ffffff`,
   },
   tabs: {
     tabHeader: {

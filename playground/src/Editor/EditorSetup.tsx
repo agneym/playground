@@ -7,9 +7,11 @@ import styled from "styled-components";
 import { IEditorTabs } from "../types";
 
 const StyledSimpleEditor = styled(SimpleEditor)`
-  background-color: #000000;
-  color: #ffffff;
+  background-color: ${props => props.theme.editor.backgroundColor};
+  color: ${props => props.theme.editor.color};
   overflow-y: auto !important;
+  font-family: ${props => props.theme.editor.fontFamily};
+  font-feature-settings: normal;
 `;
 
 interface IProps {
