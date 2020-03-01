@@ -1,4 +1,4 @@
-import React, { FC, useState, useCallback, useEffect, useRef } from "react";
+import React, { FC, useState } from "react";
 import styled, { ThemeProvider, DefaultTheme } from "styled-components";
 import { useId } from "@reach/auto-id";
 
@@ -39,7 +39,7 @@ const Playground: FC<IProps> = ({
   theme = ourTheme,
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
-  const id = useId(userId);
+  const id = useId(userId) as string;
 
   const onSnippetChange = (changed: string, type: IEditorTabs) => {
     setSnippet(snippet => ({
@@ -50,26 +50,28 @@ const Playground: FC<IProps> = ({
 
   return (
     <ThemeProvider theme={theme}>
-      <StyledDraggable
-        leftChild={width => (
-          <Editor
-            width={width}
-            code={snippet}
-            defaultTab={defaultEditorTab}
-            onChange={onSnippetChange}
-          />
-        )}
-        rightChild={width => (
-          <Result
-            width={width}
-            id={id}
-            snippet={snippet}
-            defaultTab={defaultResultTab}
-            transformJs={transformJs}
-            presets={presets}
-          />
-        )}
-      />
+      <div className="playground">
+        <StyledDraggable
+          leftChild={width => (
+            <Editor
+              width={width}
+              code={snippet}
+              defaultTab={defaultEditorTab}
+              onChange={onSnippetChange}
+            />
+          )}
+          rightChild={width => (
+            <Result
+              width={width}
+              id={id}
+              snippet={snippet}
+              defaultTab={defaultResultTab}
+              transformJs={transformJs}
+              presets={presets}
+            />
+          )}
+        />
+      </div>
     </ThemeProvider>
   );
 };
