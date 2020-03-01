@@ -18,10 +18,10 @@
     "example"
   ],
   "devDependencies": {
-    "husky": "^3.0.9",
+    "husky": "^4.2.3",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.8.3"
   },
   "repository": {
     "type": "git",
