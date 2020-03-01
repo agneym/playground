@@ -8,6 +8,7 @@ const Container = styled.div`
   position: absolute;
   width: 100%;
   bottom: 0;
+  box-sizing: border-box;
 `;
 
 interface IProps {

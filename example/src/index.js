@@ -23,8 +23,7 @@ render(app, document.getElementById('app'));
         initialSnippet={snippet}
         defaultEditorTab="javascript"
         defaultResultTab="console"
-        transformJs
-        presets={["react"]}
+        mode="dark"
       />
     </Fragment>
   );

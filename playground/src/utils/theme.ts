@@ -1,23 +1,8 @@
-import { DefaultTheme } from "styled-components";
 import { merge } from "lodash-es";
 
 const lightModeColors = {
   container: {
     borderColor: "rgba(0, 0, 0, 0.3)",
-  }
-}
-
-const darkModeColors = {
-  container: {
-    borderColor: "#ffffff",
-  }
-}
-
-export const theme = {
-  container: {
-    borderColor: "",
-    minHeight: "20em",
-    minWidth: "20em",
   },
   error: {
     background: "#e74c3c",
@@ -27,24 +12,87 @@ export const theme = {
     background: "rgba(0, 0, 0, 1)",
   },
   divider: {
-    width: 2,
     background: "#202020",
   },
   editor: {
-    fontFamily: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
     backgroundColor: `#000000`,
     color: `#ffffff`,
   },
   tabs: {
     tabHeader: {
-      borderBottom: "0.1em solid rgba(0, 0, 0, 0.1)",
-      background: `transparent`,
+      background: 'transparent',
+      color: `#000000`,
+      borderBottom: `0.1em solid rgba(0, 0, 0, 0.1)`,
+    },
+  },
+}
+
+const darkModeColors = {
+  container: {
+    borderColor: "rgba(255, 255, 255, 0.4)",
+  },
+  error: {
+    background: "#e74c3c",
+    color: "#ffffff",
+  },
+  console: {
+    background: "rgba(0, 0, 0, 1)",
+  },
+  divider: {
+    background: "rgba(255, 255, 255, 0.5)",
+  },
+  editor: {
+    backgroundColor: `#000000`,
+    color: `#ffffff`,
+  },
+  tabs: {
+    tabHeader: {
+      background: `rgba(1, 21, 21, 0.8)`,
+      panelBackground: `rgb(1, 21, 21)`,
+      color: `#ffffff`,
+      borderBottom: `0.1em solid rgba(255, 255, 255, 0.4)`,
+    },
+    selectedTab: {
+      borderBottom: "0.2em solid rgb(255, 255, 255)",
+    },
+  },
+}
+
+export const theme = {
+  container: {
+    borderColor: "",
+    minHeight: "20em",
+    minWidth: "20em",
+  },
+  error: {
+    background: "",
+    color: "",
+  },
+  console: {
+    background: "rgba(0, 0, 0, 1)",
+  },
+  divider: {
+    width: 2,
+    background: "",
+  },
+  editor: {
+    fontFamily: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
+    backgroundColor: ``,
+    color: ``,
+  },
+  tabs: {
+    tabHeader: {
+      borderBottom: "",
+      panelBackground: "",
+      background: "",
+      color: '',
     },
     tabPanel: {
       phoneHeight: "10em",
     },
     selectedTab: {
-      borderBottom: "0.1em solid rgb(0, 0, 0)",
+      background: '',
+      borderBottom: "0.2em solid rgb(0, 0, 0)",
     },
   },
 };

@@ -17,6 +17,7 @@ export const StyledTabs = styled(Tabs)`
 export const StyledTabList = styled(TabList)`
   border-bottom: ${props => props.theme.tabs.tabHeader.borderBottom};
   padding: 0 0.8em;
+  background-color: ${props => props.theme.tabs.tabHeader.panelBackground || 'transparent'};
 `;
 
 export const StyledTab = styled(Tab)`
@@ -25,6 +26,7 @@ export const StyledTab = styled(Tab)`
   padding: 0.8em 0.5em;
   margin: 0 0.2em;
   cursor: pointer;
+  color: ${props => props.theme.tabs.tabHeader.color};
 
   &[data-selected] {
     border-bottom: ${props => props.theme.tabs.selectedTab.borderBottom};
