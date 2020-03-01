@@ -1,8 +1,21 @@
 import { DefaultTheme } from "styled-components";
+import { merge } from "lodash-es";
 
-const theme: DefaultTheme = {
+const lightModeColors = {
   container: {
-    border: "0.1em solid rgba(0, 0, 0, 0.3)",
+    borderColor: "rgba(0, 0, 0, 0.3)",
+  }
+}
+
+const darkModeColors = {
+  container: {
+    borderColor: "#ffffff",
+  }
+}
+
+export const theme = {
+  container: {
+    borderColor: "",
     minHeight: "20em",
     minWidth: "20em",
   },
@@ -25,6 +38,7 @@ const theme: DefaultTheme = {
   tabs: {
     tabHeader: {
       borderBottom: "0.1em solid rgba(0, 0, 0, 0.1)",
+      background: `transparent`,
     },
     tabPanel: {
       phoneHeight: "10em",
@@ -35,4 +49,13 @@ const theme: DefaultTheme = {
   },
 };
 
-export default theme;
+export type ColorMode = "light" | "dark"
+
+/**
+ * Get corresponding theme.
+ * @param mode color theme type
+ */
+export default function getTheme(mode: ColorMode = "light") {
+  const colorTheme = mode === "light" ? lightModeColors : darkModeColors;
+  return merge(theme, colorTheme);
+}

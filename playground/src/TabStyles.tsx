@@ -20,7 +20,7 @@ export const StyledTabList = styled(TabList)`
 `;
 
 export const StyledTab = styled(Tab)`
-  background-color: transparent;
+  background-color: ${props => props.theme.tabs.tabHeader.background};
   border: none;
   padding: 0.8em 0.5em;
   margin: 0 0.2em;
