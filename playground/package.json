@@ -30,37 +30,35 @@
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "styled-components": "^4.4.1"
+    "react": ">=16",
+    "react-dom": ">=16",
+    "styled-components": ">=4"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.7.0",
-    "@babel/preset-typescript": "^7.7.2",
-    "@testing-library/jest-dom": "^4.2.3",
-    "@testing-library/react": "^9.3.2",
-    "@types/jest": "^24.0.22",
-    "@types/lodash": "^4.14.147",
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.4",
-    "@types/react-inspector": "^3.0.0",
-    "@types/styled-components": "^4.4.0",
-    "jest": "^24.9.0",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.1",
+    "@types/jest": "^25.1.3",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-inspector": "^4.0.0",
+    "@types/styled-components": "^5.0.1",
+    "jest": "^25.1.0",
     "microbundle": "^0.11.0",
-    "np": "^5.1.3",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "styled-components": "^4.4.1"
+    "np": "^6.2.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.0.1"
   },
   "dependencies": {
     "@agney/react-inspector": "^4.0.0",
-    "@reach/auto-id": "^0.6.1",
-    "@reach/tabs": "^0.6.1",
-    "lodash": "^4.17.15",
+    "@reach/auto-id": "^0.8.5",
+    "@reach/tabs": "^0.8.5",
     "prism-react-renderer": "^1.0.2",
-    "react-simple-code-editor": "^0.10.0"
+    "react-simple-code-editor": "^0.11.0"
   },
   "jest": {
     "rootDir": "src"
