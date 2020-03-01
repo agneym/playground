@@ -43,6 +43,7 @@
     "@testing-library/react": "^9.4.1",
     "@types/jest": "^25.1.3",
     "@types/lodash": "^4.14.149",
+    "@types/lodash.merge": "^4.6.6",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@types/react-inspector": "^4.0.0",
@@ -59,7 +60,7 @@
     "@reach/auto-id": "^0.8.5",
     "@reach/tabs": "^0.8.5",
     "@types/lodash-es": "^4.17.3",
-    "lodash-es": "^4.17.15",
+    "lodash.merge": "^4.6.2",
     "prism-react-renderer": "^1.0.2",
     "react-simple-code-editor": "^0.11.0"
   },
