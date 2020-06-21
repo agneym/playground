@@ -2,6 +2,8 @@ import React, { FC, useState, useEffect } from "react";
 import styled, { ThemeProvider, DefaultTheme } from "styled-components";
 import { useId } from "@reach/auto-id";
 
+import "@reach/tabs/styles.css";
+
 import Editor from "./Editor";
 import Result from "./Result";
 import { ISnippet, IEditorTabs, IResultTabs } from "./types";
@@ -10,9 +12,9 @@ import media from "./utils/media";
 import Draggable from "./Draggable";
 
 const StyledDraggable = styled(Draggable)`
-  border: 0.1em solid ${props => props.theme.container.borderColor};
+  border: 0.1em solid ${(props) => props.theme.container.borderColor};
   display: flex;
-  min-height: ${props => props.theme.container.minHeight};
+  min-height: ${(props) => props.theme.container.minHeight};
 
   ${media.phone`
     flex-direction: column;
@@ -42,10 +44,12 @@ const Playground: FC<IProps> = ({
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
   const id = useId(userId) as string;
-  const [consolidatedTheme, setConsolidatedTheme] = useState<DefaultTheme>(ourTheme);
+  const [consolidatedTheme, setConsolidatedTheme] = useState<DefaultTheme>(
+    ourTheme
+  );
 
   const onSnippetChange = (changed: string, type: IEditorTabs) => {
-    setSnippet(snippet => ({
+    setSnippet((snippet) => ({
       ...snippet,
       [type]: changed,
     }));
@@ -59,7 +63,7 @@ const Playground: FC<IProps> = ({
     <ThemeProvider theme={theme || consolidatedTheme}>
       <div className="playground">
         <StyledDraggable
-          leftChild={width => (
+          leftChild={(width) => (
             <Editor
               width={width}
               code={snippet}
@@ -67,7 +71,7 @@ const Playground: FC<IProps> = ({
               onChange={onSnippetChange}
             />
           )}
-          rightChild={width => (
+          rightChild={(width) => (
             <Result
               width={width}
               id={id}
