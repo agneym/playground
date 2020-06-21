@@ -18,14 +18,15 @@ render(app, document.getElementById('app'));
     `,
   };
   return (
-    <Fragment>
+    <div style={{ width: "80%", margin: "0 auto" }}>
       <Playground
         initialSnippet={snippet}
         defaultEditorTab="javascript"
-        defaultResultTab="console"
+        defaultResultTab="result"
         mode="dark"
+        transformJs
       />
-    </Fragment>
+    </div>
   );
 };
 

@@ -14,8 +14,8 @@
   "dependencies": {
     "@agney/playground": "*",
     "babel-polyfill": "^6.26.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
