@@ -20,12 +20,12 @@ const lightModeColors = {
   },
   tabs: {
     tabHeader: {
-      background: 'transparent',
+      background: "transparent",
       color: `#000000`,
       borderBottom: `0.1em solid rgba(0, 0, 0, 0.1)`,
     },
   },
-}
+};
 
 const darkModeColors = {
   container: {
@@ -56,13 +56,13 @@ const darkModeColors = {
       borderBottom: "0.2em solid rgb(255, 255, 255)",
     },
   },
-}
+};
 
 export const theme = {
   container: {
     borderColor: "",
     minHeight: "20em",
-    minWidth: "20em",
+    minWidth: "15em",
   },
   error: {
     background: "",
@@ -85,19 +85,19 @@ export const theme = {
       borderBottom: "",
       panelBackground: "",
       background: "",
-      color: '',
+      color: "",
     },
     tabPanel: {
       phoneHeight: "10em",
     },
     selectedTab: {
-      background: '',
+      background: "",
       borderBottom: "0.2em solid rgb(0, 0, 0)",
     },
   },
 };
 
-export type ColorMode = "light" | "dark"
+export type ColorMode = "light" | "dark";
 
 /**
  * Get corresponding theme.
