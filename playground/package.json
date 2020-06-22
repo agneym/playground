@@ -1,11 +1,11 @@
 {
   "name": "@agney/playground",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
   "scripts": {
     "start": "microbundle watch",
-    "build": "microbundle --raw",
+    "build": "microbundle --jsx React.createElement --tsconfig tsconfig.json",
     "test": "jest",
     "prepublishOnly": "yarn build",
     "release": "np"
@@ -49,7 +49,7 @@
     "@types/react-inspector": "^4.0.0",
     "@types/styled-components": "^5.1.0",
     "jest": "^26.0.1",
-    "microbundle": "^0.12.1",
+    "microbundle": "^0.11.0",
     "np": "^6.2.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

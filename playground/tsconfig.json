@@ -5,7 +5,8 @@
     "jsx": "react",
     "lib": ["es2017", "dom"],
     "noEmitOnError": true,
-    "strict": true,
-    "target": "es5"
+    "strict": false,
+    "target": "es5",
+    "typeRoots": ["./node_modules/@types", "../node_modules/@types", "./types"]
   }
 }
