@@ -109,13 +109,13 @@ import { format } from "date-fns";
 format(new Date(2014, 1, 11), "yyyy-MM-dd");
 ```
 
-Unfortunately, not all packages currently support this feature. You can search through an entire list of packages through [pika.dev](https://pika.dev).
+Unfortunately, not all packages currently support this feature. You can search through an entire list of packages through [Skypack](https://www.skypack.dev/).
 
 You can use community created packages to replicate the functionality. For eg. React would be:
 
 ```js
-import React, { createElement } from "@pika/react";
-import ReactDOM from "@pika/react-dom";
+import React, { createElement } from "https://cdn.skypack.dev/react";
+import ReactDOM from "https://cdn.skypack.dev/react-dom";
 
 ReactDOM.render(
   createElement("div", {}, "Hello World"),
@@ -132,8 +132,8 @@ const App = () => {
   const snippet = {
     markup: `<div id=app />`,
     css: ``,
-    javascript: `import React, { createElement } from "@pika/react";
-import ReactDOM from "@pika/react-dom";
+    javascript: `import React, { createElement } from "https://cdn.skypack.dev/react";
+import ReactDOM from "https://cdn.skypack.dev/react-dom";
 
 ReactDOM.render(
   <h1>Hello World</h1>,
