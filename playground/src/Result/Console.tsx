@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import styled from "styled-components";
+import { styled } from "goober";
 import Inspector from "@agney/react-inspector";
 
-const Container = styled.div`
+const Container = styled('div')`
   background-color: ${props => props.theme.console.background};
   height: 100%;
 

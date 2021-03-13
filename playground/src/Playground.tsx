@@ -19,9 +19,9 @@ const StyledDraggable = styled(Draggable)`
   display: flex;
   min-height: ${(props) => props.theme.container.minHeight};
 
-  ${media.phone`
+  ${media.phone} {
     flex-direction: column;
-  `}
+  }
 `;
 
 interface IProps {

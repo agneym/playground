@@ -1,11 +1,11 @@
 import React, { FC, useMemo, useState, memo, useEffect } from "react";
-import styled from "styled-components";
+import {styled} from "goober";
 
 import { ISnippet } from "../types";
 import constructSnippet from "../utils/constructSnippet";
 import ErrorDisplay from "./ErrorDisplay";
 
-const Container = styled.div`
+const Container = styled('div')`
   position: relative;
   height: 100%;
 

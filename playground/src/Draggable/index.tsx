@@ -1,14 +1,15 @@
-import React, { FC, ReactNode, useRef, useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import React, { FC, ReactNode, useRef } from "react";
+import { styled } from "goober";
 
 import useDrag from "./useDrag";
+import { useTheme } from "../utils/ThemeProvider";
 
-const Container = styled.div`
+const Container = styled('div')`
   display: flex;
   align-items: stretch;
 `;
 
-const Divider = styled.div`
+const Divider = styled('div')`
   width: ${props => props.theme.divider.width}px;
   cursor: col-resize;
   background-color: ${props => props.theme.divider.background};
@@ -23,7 +24,7 @@ interface IProps {
 const Draggable: FC<IProps> = ({ className = "", leftChild, rightChild }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const dividerRef = useRef<HTMLDivElement>(null);
-  const themeContext = useContext(ThemeContext);
+  const themeContext = useTheme();
 
   const { leftWidth, rightWidth } = useDrag({
     containerRef,

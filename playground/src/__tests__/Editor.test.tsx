@@ -1,8 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
+
 import Editor from "../Editor";
-import { ThemeProvider } from "styled-components";
 import getTheme from "../utils/theme";
+import { ThemeProvider } from "../utils/ThemeProvider";
 
 const initialSnippet = {
   markup: ``,
@@ -14,7 +15,7 @@ describe("Editor", () => {
   it("should render the default tab as per prop", () => {
     const defaultTab = "css";
     const { getByText } = render(
-      <ThemeProvider theme={getTheme()}>
+      <ThemeProvider userTheme={getTheme()} mode='light'>
         <Editor
           width={40}
           code={initialSnippet}

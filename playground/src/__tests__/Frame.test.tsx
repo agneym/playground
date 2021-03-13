@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "../utils/ThemeProvider";
 import getTheme from "../utils/theme";
 
 import Frame from "../Result/Frame";
@@ -20,7 +20,7 @@ const initialSnippet = {
 describe("Frame", () => {
   it("should render error", () => {
     const { getByText } = render(
-      <ThemeProvider theme={getTheme()}>
+      <ThemeProvider userTheme={getTheme()} mode='light'>
         <Frame
           id="thing"
           snippet={initialSnippet}
