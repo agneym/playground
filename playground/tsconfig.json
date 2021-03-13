@@ -8,6 +8,7 @@
     "strict": false,
     "module": "ESNext",
     "target": "ESNext",
+    "moduleResolution": "Node",
     "typeRoots": ["./node_modules/@types", "../node_modules/@types", "./types"]
   }
 }

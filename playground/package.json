@@ -48,6 +48,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-inspector": "^4.0.0",
     "@types/styled-components": "^5.1.0",
+    "babel-plugin-transform-goober": "^1.2.0",
     "jest": "^26.0.1",
     "microbundle": "^0.11.0",
     "np": "^6.2.4",
@@ -60,6 +61,7 @@
     "@reach/auto-id": "^0.10.4",
     "@reach/tabs": "^0.10.4",
     "@types/lodash-es": "^4.17.3",
+    "goober": "^2.0.33",
     "lodash.merge": "^4.6.2",
     "prism-react-renderer": "^1.1.1",
     "react-simple-code-editor": "^0.11.0"
