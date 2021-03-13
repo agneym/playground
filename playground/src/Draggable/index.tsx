@@ -1,15 +1,15 @@
-import React, { FC, ReactNode, useRef } from "react";
+import React, { FC, ReactNode, useRef, forwardRef } from "react";
 import { styled } from "goober";
 
 import useDrag from "./useDrag";
 import { useTheme } from "../utils/ThemeProvider";
 
-const Container = styled('div')`
+const Container = styled('div', forwardRef)`
   display: flex;
   align-items: stretch;
 `;
 
-const Divider = styled('div')`
+const Divider = styled('div', forwardRef)`
   width: ${props => props.theme.divider.width}px;
   cursor: col-resize;
   background-color: ${props => props.theme.divider.background};

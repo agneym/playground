@@ -7,12 +7,12 @@ import { styled } from "goober";
 import { IEditorTabs } from "../types";
 
 const EditorWrapper = styled("div")`
-  display: inline-block;
   background-color: ${(props) => props.theme.editor.backgroundColor};
   color: ${(props) => props.theme.editor.color};
   overflow-y: auto !important;
   font-family: ${(props) => props.theme.editor.fontFamily};
   font-feature-settings: normal;
+  height: 100%;
 `;
 
 interface IProps {
