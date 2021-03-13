@@ -26,12 +26,10 @@
 Install from `npm` with:
 
 ```
-npm install styled-components @agney/playground
+npm install @agney/playground
 # OR
-yarn add styled-components @agney/playground
+yarn add @agney/playground
 ```
-
-Playground uses [styled-components](https://styled-components.com/) for styling.
 
 ```jsx
 import Playground from "@agney/playground";
