@@ -6,7 +6,8 @@
     "lib": ["es2017", "dom"],
     "noEmitOnError": true,
     "strict": false,
-    "target": "es5",
+    "module": "ESNext",
+    "target": "ESNext",
     "typeRoots": ["./node_modules/@types", "../node_modules/@types", "./types"]
   }
 }

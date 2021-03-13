@@ -5,7 +5,7 @@
   "private": false,
   "scripts": {
     "start": "microbundle watch",
-    "build": "microbundle --jsx React.createElement --tsconfig tsconfig.json",
+    "build": "microbundle",
     "test": "jest",
     "prepublishOnly": "yarn build",
     "release": "np"
@@ -14,10 +14,10 @@
     "access": "public"
   },
   "source": "src/Playground.tsx",
-  "main": "dist/editor.js",
-  "module": "dist/editor.module.js",
-  "umd:main": "dist/editor.umd.js",
-  "unpkg": "dist/editor.umd.js",
+  "main": "dist/playground.js",
+  "exports": "./dist/playground.modern.js",
+  "module": "dist/playground.module.js",
+  "unpkg": "dist/playground.umd.js",
   "keywords": [
     "react",
     "editor",
