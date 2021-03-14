@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from "react";
-import styled from "styled-components";
+import {styled} from "goober";
 import { IEditorTabs, ISnippet } from "../types";
 import EditorSetup from "./EditorSetup";
 import { ITabConfig } from "../types";

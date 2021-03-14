@@ -1,24 +1,28 @@
-import React, { FC, useState, useEffect } from "react";
-import styled, { ThemeProvider, DefaultTheme } from "styled-components";
+// @ts-nocheck
+import React, { FC, useState, createElement } from "react";
 import { useId } from "@reach/auto-id";
+import { styled, setup, DefaultTheme } from "goober";
 
 import "@reach/tabs/styles.css";
 
 import Editor from "./Editor";
 import Result from "./Result";
 import { ISnippet, IEditorTabs, IResultTabs } from "./types";
-import getTheme, { ColorMode, theme as ourTheme } from "./utils/theme";
+import { ThemeProvider, useTheme } from "./utils/ThemeProvider";
+import { ColorMode } from "./utils/theme";
 import media from "./utils/media";
 import Draggable from "./Draggable";
+
+setup(createElement, undefined, useTheme);
 
 const StyledDraggable = styled(Draggable)`
   border: 0.1em solid ${(props) => props.theme.container.borderColor};
   display: flex;
   min-height: ${(props) => props.theme.container.minHeight};
 
-  ${media.phone`
+  ${media.phone} {
     flex-direction: column;
-  `}
+  }
 `;
 
 interface IProps {
@@ -44,9 +48,6 @@ const Playground: FC<IProps> = ({
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
   const id = useId(userId) as string;
-  const [consolidatedTheme, setConsolidatedTheme] = useState<DefaultTheme>(
-    ourTheme
-  );
 
   const onSnippetChange = (changed: string, type: IEditorTabs) => {
     setSnippet((snippet) => ({
@@ -55,12 +56,8 @@ const Playground: FC<IProps> = ({
     }));
   };
 
-  useEffect(() => {
-    setConsolidatedTheme(getTheme(mode));
-  }, [mode]);
-
   return (
-    <ThemeProvider theme={theme || consolidatedTheme}>
+    <ThemeProvider userTheme={theme} mode={mode}>
       <div className="playground">
         <StyledDraggable
           leftChild={(width) => (

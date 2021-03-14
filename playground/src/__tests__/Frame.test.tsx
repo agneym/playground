@@ -1,7 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
-import getTheme from "../utils/theme";
+import { render } from "../../scripts/test-utils";
 
 import Frame from "../Result/Frame";
 
@@ -20,14 +18,12 @@ const initialSnippet = {
 describe("Frame", () => {
   it("should render error", () => {
     const { getByText } = render(
-      <ThemeProvider theme={getTheme()}>
-        <Frame
-          id="thing"
-          snippet={initialSnippet}
-          transformJs={false}
-          presets={[]}
-        />
-      </ThemeProvider>
+      <Frame
+        id="thing"
+        snippet={initialSnippet}
+        transformJs={false}
+        presets={[]}
+      />
     );
     expect(getByText("error")).toBeDefined();
   });
