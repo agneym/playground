@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC, useState, createElement } from "react";
 import { useId } from "@reach/auto-id";
 import { styled, setup, DefaultTheme } from "goober";
@@ -7,7 +8,7 @@ import "@reach/tabs/styles.css";
 import Editor from "./Editor";
 import Result from "./Result";
 import { ISnippet, IEditorTabs, IResultTabs } from "./types";
-import { ThemeProvider, useTheme } from './utils/ThemeProvider';
+import { ThemeProvider, useTheme } from "./utils/ThemeProvider";
 import { ColorMode } from "./utils/theme";
 import media from "./utils/media";
 import Draggable from "./Draggable";

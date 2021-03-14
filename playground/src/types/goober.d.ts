@@ -1,6 +1,6 @@
 import "goober";
 
-import { theme } from "../src/utils/theme";
+import { theme } from "../utils/theme";
 
 declare module "goober" {
   type OurTheme = typeof theme;
