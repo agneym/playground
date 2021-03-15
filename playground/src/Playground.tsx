@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { FC, useState, createElement } from "react";
 import { useId } from "@reach/auto-id";
 import { styled, setup, DefaultTheme } from "goober";
