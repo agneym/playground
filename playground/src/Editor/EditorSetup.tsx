@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { FC, Fragment } from "react";
 import SimpleEditor from "react-simple-code-editor";
 import Highlight, { defaultProps } from "prism-react-renderer";

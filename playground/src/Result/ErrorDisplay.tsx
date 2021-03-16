@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { FC } from "react";
 import { styled } from "goober";
 
