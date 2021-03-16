@@ -33,7 +33,7 @@ yarn add @agney/playground
 
 ```jsx
 import Playground from "@agney/playground";
-/* Why is there a tabs import? */
+/* Why is there a tabs import? https://github.com/agneym/playground#why-is-there-a-reacttabs-import*/
 import "@reach/tabs/styles.css";
 
 const App = () => {
