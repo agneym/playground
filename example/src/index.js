@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { render } from "react-dom";
 import "babel-polyfill";
+import "@reach/tabs/styles.css";
 import Playground from "@agney/playground";
 
 const App = () => {

@@ -33,6 +33,8 @@ yarn add @agney/playground
 
 ```jsx
 import Playground from "@agney/playground";
+/* Why is there a tabs import? https://github.com/agneym/playground#why-is-there-a-reacttabs-import*/
+import "@reach/tabs/styles.css";
 
 const App = () => {
   const snippet = {
@@ -96,6 +98,12 @@ https://blog.agney.dev/introducing-playground/
   javascript: `console.log("this")`
 }
 ```
+
+### Why is there a @react/tabs import?
+
+Playground uses [`@reach/tabs`](https://reach.tech/tabs/) as a dependency. We could bundle the stylesheet or inject it inline on runtime. But both those options add unnecessary code if you are already using it.
+
+_This might cause breaking changes if you have a different version of `@reach/tabs` but then I'm just expecting it to be stable along the road._
 
 ### How does module imports work?
 
