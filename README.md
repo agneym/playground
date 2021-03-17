@@ -21,8 +21,9 @@
 
 **Playground** is a HTML, CSS and JS demonstration component that runs entirely in the browser and does not require loading any third party sites.
 
-![image](https://user-images.githubusercontent.com/1884712/111269264-9fd0c480-85eb-11eb-8e5f-d42179381664.png)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1884712/111428687-108fe380-86b5-11eb-94d1-a861e5c25d36.png" alt="screenshot" />
+</p>
 
 ## Usage
 
