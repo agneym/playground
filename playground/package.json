@@ -15,9 +15,18 @@
   },
   "source": "src/Playground.tsx",
   "main": "dist/playground.js",
-  "exports": "./dist/playground.modern.js",
   "module": "dist/playground.module.js",
   "unpkg": "dist/playground.umd.js",
+  "umd:main": "dist/playground.umd.js",
+  "types": "dist/Playground.d.ts",
+  "exports": {
+    ".": {
+      "browser": "./dist/playground.module.js",
+      "umd": "./dist/playground.umd.js",
+      "import": "./dist/playground.module.js",
+      "require": "./dist/playground.js"
+    }
+  },
   "keywords": [
     "react",
     "editor",
@@ -30,8 +39,8 @@
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "dependencies": {
     "@agney/react-inspector": "^4.0.0",
