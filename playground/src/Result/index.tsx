@@ -31,20 +31,20 @@ const Result: FC<IProps> = ({
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
     () => [
-      { name: "Result", value: "result" },
-      { name: "Console", value: "console" },
+      { name: "Result", value: "result" as IResultTabs },
+      { name: "Console", value: "console" as IResultTabs },
     ],
     []
   );
   useEffect(() => {
     function waitForMessage() {
       if (typeof window !== "undefined") {
-        window.addEventListener("message", data => {
+        window.addEventListener("message", (data) => {
           if (
             data.data.source === `frame-${id}` &&
             data.data.message.type === "log"
           ) {
-            setLogs(prevLogs => [...prevLogs, ...data.data.message.data]);
+            setLogs((prevLogs) => [...prevLogs, ...data.data.message.data]);
           }
         });
       }
@@ -53,11 +53,11 @@ const Result: FC<IProps> = ({
   }, [id]);
   return (
     <StyledTabs
-      defaultIndex={tabs.findIndex(tab => tab.value === defaultTab)}
+      defaultIndex={tabs.findIndex((tab) => tab.value === defaultTab)}
       style={{ width: width }}
     >
       <StyledTabList>
-        {tabs.map(tab => (
+        {tabs.map((tab) => (
           <StyledTab key={tab.value}>{tab.name}</StyledTab>
         ))}
       </StyledTabList>

@@ -23,18 +23,19 @@ interface IProps {
 }
 
 const Editor: FC<IProps> = ({ code, defaultTab, onChange, width }) => {
-  const tabs: Readonly<ITabConfig<IEditorTabs>[]> = useMemo(
-    () => [
-      ...(code.markup && [
-        { name: "HTML", value: "markup", code: code.markup },
-      ]),
-      ...(code.css && [{ name: "CSS", value: "css", code: code.css }]),
-      ...(code.javascript && [
-        { name: "JS", value: "javascript", code: code.javascript },
-      ]),
-    ],
-    []
-  );
+  const tabs: Readonly<ITabConfig<IEditorTabs>[]> = useMemo(() => {
+    const tabsArr = [];
+    if (code.markup) {
+      tabsArr.push({ name: "HTML", value: "markup", code: code.markup });
+    }
+    if (code.css) {
+      tabsArr.push({ name: "CSS", value: "css", code: code.css });
+    }
+    if (code.javascript) {
+      tabsArr.push({ name: "JS", value: "javascript", code: code.javascript });
+    }
+    return tabsArr;
+  }, []);
   return (
     <TabContainer
       defaultIndex={tabs.findIndex(
