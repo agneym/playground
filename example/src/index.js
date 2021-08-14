@@ -7,7 +7,7 @@ import Playground from "@agney/playground";
 const App = () => {
   const snippet = {
     markup: `<div id=app />`,
-    css: ``,
+    css: `div { color: red }`,
     javascript: `import { h, Component, render } from 'preact';
 import htm from 'htm';
 
