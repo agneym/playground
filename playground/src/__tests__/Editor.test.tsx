@@ -40,7 +40,7 @@ describe("Editor", () => {
 
   it("should render only the tabs that provided code", () => {
     const defaultTab = "markup";
-    const { getByText, container, debug } = render(
+    const { getByText, queryByText } = render(
       <Editor
         width={40}
         code={emptySnippet}
@@ -49,10 +49,13 @@ describe("Editor", () => {
       />
     );
 
-    const html = getByText("HTML");
-    const javascript = getByText("JS");
+    const htmlTab = getByText("HTML");
+    const javascriptTab = getByText("JS");
 
-    expect(html).toBeTruthy();
-    expect(javascript).toBeTruthy();
+    expect(htmlTab).toBeTruthy();
+    expect(javascriptTab).toBeTruthy();
+
+    const cssTab = queryByText("CSS");
+    expect(cssTab).toBeFalsy();
   });
 });
