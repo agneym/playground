@@ -54,7 +54,7 @@ const Editor: FC<IProps> = ({ code, defaultTab, onChange, width }) => {
             tab.code && (
               <StyledTabPanel key={tab.value}>
                 <EditorSetup
-                  code={tab.code}
+                  code={code[tab.value]}
                   onChange={onChange}
                   language={tab.value}
                 />
