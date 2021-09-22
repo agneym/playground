@@ -92,6 +92,7 @@ https://blog.agney.dev/introducing-playground/
 |   transformJs    |             Transform the JavaScript using Babel. This is required if you want bare module imports              |                                            false                                            |  false   |
 |     presets      | Array of presets you want Babel to transform. This works only if transformJs is true. Eg. `["react", "es2015"]` |                                                                                             |  false   |
 |      theme       |                             Pass in the theme variables to customise the appearance                             | [Our Theme](https://github.com/agneym/playground/blob/master/playground/src/utils/theme.ts) |  false   |
+|   interactive    |                                 Whether the result interface allows interaction                                 |                                            false                                            |  false   |
 
 ### Format for initial snippet
 
