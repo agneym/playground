@@ -26,6 +26,7 @@ render(app, document.getElementById('app'));
         defaultResultTab="result"
         mode="dark"
         transformJs
+        interactive={true}
       />
     </div>
   );

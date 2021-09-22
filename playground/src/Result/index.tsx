@@ -18,6 +18,7 @@ interface IProps {
   transformJs: boolean;
   presets: string[];
   width: number;
+  interactive: boolean;
 }
 
 const Result: FC<IProps> = ({
@@ -27,6 +28,7 @@ const Result: FC<IProps> = ({
   defaultTab,
   transformJs,
   width,
+  interactive,
 }) => {
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
@@ -68,6 +70,7 @@ const Result: FC<IProps> = ({
             snippet={snippet}
             transformJs={transformJs}
             presets={presets}
+            interactive={interactive}
           />
         </StyledTabPanel>
         <StyledTabPanel>

@@ -23,6 +23,7 @@ describe("Frame", () => {
         snippet={initialSnippet}
         transformJs={false}
         presets={[]}
+        interactive={true}
       />
     );
     expect(getByText("error")).toBeDefined();
