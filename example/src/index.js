@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import "babel-polyfill";
 import "@reach/tabs/styles.css";
-import Playground from "@openHacking/playground";
+import Playground from "@openhacking/playground";
 
 const App = () => {
   const snippet = {

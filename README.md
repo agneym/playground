@@ -36,13 +36,13 @@ Modified from `@agney/playground`, mainly to add config [interactive](https://gi
 Install from `npm` with:
 
 ```
-npm install @openHacking/playground
+npm install @openhacking/playground
 # OR
-yarn add @openHacking/playground
+yarn add @openhacking/playground
 ```
 
 ```jsx
-import Playground from "@openHacking/playground";
+import Playground from "@openhacking/playground";
 /* Why is there a tabs import? https://github.com/agneym/playground#why-is-there-a-reacttabs-import*/
 import "@reach/tabs/styles.css";
 

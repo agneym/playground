@@ -3,10 +3,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "yarn workspace @openHacking/playground start",
+    "start": "yarn workspace @openhacking/playground start",
     "start-example": "yarn workspace example start",
-    "build": "yarn workspace @openHacking/playground build",
-    "test": "yarn workspace @openHacking/playground test",
+    "build": "yarn workspace @openhacking/playground build",
+    "test": "yarn workspace @openhacking/playground test",
     "prepare": "husky install"
   },
   "workspaces": [

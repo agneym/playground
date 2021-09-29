@@ -1,5 +1,5 @@
 {
-  "name": "@openHacking/playground",
+  "name": "@openhacking/playground",
   "version": "0.7.1",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,

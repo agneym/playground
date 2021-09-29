@@ -12,7 +12,7 @@
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
   "dependencies": {
-    "@openHacking/playground": "*",
+    "@openhacking/playground": "*",
     "babel-polyfill": "^6.26.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
