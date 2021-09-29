@@ -1,6 +1,6 @@
 {
   "name": "@openhacking/playground",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
   "scripts": {
@@ -75,9 +75,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agneym/playground"
+    "url": "https://github.com/openHacking/playground"
   },
   "bugs": {
-    "url": "https://github.com/agneym/playground/issues"
+    "url": "https://github.com/openHacking/playground/issues"
   }
 }
