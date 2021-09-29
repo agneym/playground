@@ -1,6 +1,6 @@
 {
-  "name": "@agney/playground",
-  "version": "0.7.0",
+  "name": "@openHacking/playground",
+  "version": "0.7.1",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
   "scripts": {
@@ -36,7 +36,7 @@
     "dist",
     "README.md"
   ],
-  "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
+  "author": "origin:Agney Menon <agney@outlook.in> (@agneymenon),edit:openHacking@126.com",
   "license": "MIT",
   "peerDependencies": {
     "react": "^17.0.1",

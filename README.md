@@ -19,6 +19,12 @@
 </a>
 <br>
 
+## Notice:
+
+Modified from `@agney/playground`, mainly to add config [interactive](https://github.com/agneym/playground/issues/38), because the original author has not merged this [PR](https://github.com/agneym/playground/pull/39) for the time being, so I established my own repository. If you don't need this feature, please move to the original repository [playground](https://github.com/agneym/playground).Thanks to the original author.
+
+---
+
 **Playground** is a HTML, CSS and JS demonstration component that runs entirely in the browser and does not require loading any third party sites.
 
 <div align="center">
@@ -30,13 +36,13 @@
 Install from `npm` with:
 
 ```
-npm install @agney/playground
+npm install @openHacking/playground
 # OR
-yarn add @agney/playground
+yarn add @openHacking/playground
 ```
 
 ```jsx
-import Playground from "@agney/playground";
+import Playground from "@openHacking/playground";
 /* Why is there a tabs import? https://github.com/agneym/playground#why-is-there-a-reacttabs-import*/
 import "@reach/tabs/styles.css";
 
