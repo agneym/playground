@@ -13,7 +13,11 @@ import htm from 'htm';
 
 const html = htm.bind(h);
 
-const app = html\`<div>Hello World from Playground!</div>\`
+const app = html\`
+  <div>
+    <p>Hello World from Playground!</p>
+    <input type="text" />
+  </div>\`
 
 render(app, document.getElementById('app'));
     `,

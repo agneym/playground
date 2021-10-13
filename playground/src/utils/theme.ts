@@ -13,6 +13,7 @@ const lightModeColors = {
   },
   divider: {
     background: "#202020",
+    dividerBackground: "#202020",
   },
   editor: {
     backgroundColor: `#000000`,
@@ -40,6 +41,7 @@ const darkModeColors = {
   },
   divider: {
     background: "rgba(255, 255, 255, 0.5)",
+    dividerBackground: "rgba(255, 255, 255, 0.1)",
   },
   editor: {
     backgroundColor: `#000000`,
@@ -72,8 +74,10 @@ export const theme = {
     background: "rgba(0, 0, 0, 1)",
   },
   divider: {
-    width: 2,
+    width: 4,
     background: "",
+    dividerBackground: "",
+    containerWidth: 8,
   },
   editor: {
     fontFamily: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
