@@ -76,6 +76,7 @@ export const theme = {
   divider: {
     width: 4,
     background: "",
+    dividerBackground: "",
     containerWidth: 8,
   },
   editor: {
