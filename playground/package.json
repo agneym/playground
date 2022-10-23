@@ -39,8 +39,8 @@
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "dependencies": {
     "@agney/react-inspector": "^4.0.0",
