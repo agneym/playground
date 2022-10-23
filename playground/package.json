@@ -1,6 +1,6 @@
 {
   "name": "@agney/playground",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
   "scripts": {
@@ -67,6 +67,7 @@
     "@types/react-inspector": "^4.0.2",
     "jest": "^27.2.5",
     "microbundle": "^0.14.0",
+    "np": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
