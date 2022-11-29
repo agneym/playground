@@ -103,7 +103,7 @@ https://blog.agney.dev/introducing-playground/
 }
 ```
 
-### Why is there a @react/tabs import?
+### Why is there a @reach/tabs import?
 
 Playground uses [`@reach/tabs`](https://reach.tech/tabs/) as a dependency. We could bundle the stylesheet or inject it inline on runtime. But both those options add unnecessary code if you are already using it.
 
