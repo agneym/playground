@@ -31,6 +31,7 @@ interface IProps {
   id?: string;
   theme?: DefaultTheme;
   mode: ColorMode;
+  showConsole?: boolean;
 }
 
 const Playground: FC<IProps> = ({
@@ -42,6 +43,7 @@ const Playground: FC<IProps> = ({
   presets = [],
   theme,
   mode = "light",
+  showConsole = true,
 }) => {
   const [snippet, setSnippet] = useState<ISnippet>(initialSnippet);
   const id = useId(userId) as string;
@@ -73,6 +75,7 @@ const Playground: FC<IProps> = ({
               defaultTab={defaultResultTab}
               transformJs={transformJs}
               presets={presets}
+              showConsole={showConsole}
             />
           )}
         />
