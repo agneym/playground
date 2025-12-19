@@ -9,18 +9,24 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [24.x]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn install, build, and test
-      run: |
-        yarn
-        yarn run build --if-present
-        yarn test
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: pnpm install
+    - name: Build project
+      run: pnpm run build --if-present
+    - name: Run tests
+      run: pnpm test
       env:
         CI: true
