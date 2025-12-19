@@ -3,10 +3,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "pnpm workspace @agney/playground start",
-    "start-example": "pnpm workspace example start",
-    "build": "pnpm workspace @agney/playground build",
-    "test": "pnpm workspace @agney/playground test",
+    "start": "pnpm --filter @agney/playground start",
+    "start-example": "pnpm --filter example start",
+    "build": "pnpm --filter @agney/playground build",
+    "test": "pnpm --filter @agney/playground test",
     "prepare": "husky install"
   },
   "devDependencies": {
