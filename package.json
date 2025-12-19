@@ -9,10 +9,6 @@
     "test": "yarn workspace @agney/playground test",
     "prepare": "husky install"
   },
-  "workspaces": [
-    "playground",
-    "example"
-  ],
   "devDependencies": {
     "husky": "^6.0.0",
     "prettier": "^2.4.1",
