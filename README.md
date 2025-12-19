@@ -31,8 +31,6 @@ Install from `npm` with:
 
 ```
 npm install @agney/playground
-# OR
-yarn add @agney/playground
 ```
 
 ```jsx
@@ -171,13 +169,13 @@ It uses [Chrome's Native Lazy Loading](https://web.dev/native-lazy-loading/) so 
 
 ## Contributing
 
-This project makes use of [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) for development.
+This project makes use of [pnpm Workspaces](https://pnpm.io/workspaces) for development.
 
-1. Run `yarn` for installing dependencies.
+1. Run `pnpm` for installing dependencies.
 
-2. Run `yarn start` to start development on package.
+2. Run `pnpm start` to start development on package.
 
-3. To start example, run `yarn start-example`.
+3. To start example, run `pnpm start-example`.
 
 Pull Requests are Welcome. Please create an issue to discuss before making a feature or large change. Thank You :smile:
 
