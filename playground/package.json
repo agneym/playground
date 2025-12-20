@@ -39,8 +39,8 @@
     "access": "public"
   },
   "scripts": {
-    "start": "microbundle watch --jsx React.createElement",
-    "build": "microbundle --jsx React.createElement",
+    "start": "tsdown --watch",
+    "build": "tsdown",
     "test": "jest",
     "prepublishOnly": "pnpm build",
     "type:check": "tsgo --noEmit"
@@ -55,10 +55,7 @@
     "react-simple-code-editor": "^0.11.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
+    "@rollup/plugin-babel": "^6.1.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
@@ -68,10 +65,11 @@
     "@types/react": "^17.0.29",
     "@types/react-dom": "^17.0.9",
     "@types/react-inspector": "^4.0.2",
+    "babel-plugin-react-compiler": "^1.0.0",
     "jest": "^27.2.5",
-    "microbundle": "^0.14.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "tsdown": "^0.18.1"
   },
   "peerDependencies": {
     "react": ">=16",
