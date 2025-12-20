@@ -16,6 +16,9 @@ importers:
       husky:
         specifier: ^6.0.0
         version: 6.0.0
+      oxfmt:
+        specifier: ^0.19.0
+        version: 0.19.0
       prettier:
         specifier: ^2.4.1
         version: 2.4.1
@@ -1738,6 +1741,70 @@ packages:
         integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==,
       }
     engines: { node: ">= 8" }
+
+  "@oxfmt/darwin-arm64@0.19.0":
+    resolution:
+      {
+        integrity: sha512-FfNpn3ximwbBZCaS8WL2vAXcFuQFQgvv/brO6D1WdmL4pnFOgfBIpFfkeFnKfdmdpxtg9O0wF8NTcdw5Iyl2Bg==,
+      }
+    cpu: [arm64]
+    os: [darwin]
+
+  "@oxfmt/darwin-x64@0.19.0":
+    resolution:
+      {
+        integrity: sha512-31FWUHAgTdTzOslz0zoA60UDEdeZZpeM6wTzCdffetwLbHkK8ZuCuzd+DauHZPNlSU8G72iw4lF7Zve9pSkK9w==,
+      }
+    cpu: [x64]
+    os: [darwin]
+
+  "@oxfmt/linux-arm64-gnu@0.19.0":
+    resolution:
+      {
+        integrity: sha512-BkU9h39xKj/8uko82uFDJUharM8VxZO+uXKglpBnEC8XxWRzXocVCX4wpLT/Tfk4NyBy6fRM9DeISdZvQKZCjA==,
+      }
+    cpu: [arm64]
+    os: [linux]
+
+  "@oxfmt/linux-arm64-musl@0.19.0":
+    resolution:
+      {
+        integrity: sha512-wWYk6Z/3iC+0zZAUkVCcEHui/IsUqsl+GEm9o6H7oARPLisXajbwCQcmqYslUD7eK6OXdYoWriBkEvSX/5dU4A==,
+      }
+    cpu: [arm64]
+    os: [linux]
+
+  "@oxfmt/linux-x64-gnu@0.19.0":
+    resolution:
+      {
+        integrity: sha512-EB/b3or437E3uDie8QxeU3eA502JcmR1koyIBcH9rFidY0cMik58xvw54tXCY3WpMRxEXf37aHZzUSDP3qJnZg==,
+      }
+    cpu: [x64]
+    os: [linux]
+
+  "@oxfmt/linux-x64-musl@0.19.0":
+    resolution:
+      {
+        integrity: sha512-htMB45orYoa1oFSjSmoGgcBDsD47/0joDfqpa8TrTDI5qsW5kAedpFR5wSce8Is9oj7SJ07omhOj96P/QiekWA==,
+      }
+    cpu: [x64]
+    os: [linux]
+
+  "@oxfmt/win32-arm64@0.19.0":
+    resolution:
+      {
+        integrity: sha512-x7+3Eh/VWdXEda+BUmAKYlhGrRJVera7RfWw47Yx8PJUGtNqBfeYGDbf0W59ceK8Z3bY3OinrmOO3d1jOuXzMQ==,
+      }
+    cpu: [arm64]
+    os: [win32]
+
+  "@oxfmt/win32-x64@0.19.0":
+    resolution:
+      {
+        integrity: sha512-X+FKXBg2jx4CxF5SJs3xpx1msMw5JfxaGD5qBZYqlHGdryQsy6zUY+bQwDDcuy3Ic/WNGD8ZNEuggeYNE7jx/Q==,
+      }
+    cpu: [x64]
+    os: [win32]
 
   "@parcel/bundler-default@2.16.3":
     resolution:
@@ -9221,6 +9288,14 @@ packages:
       }
     engines: { node: ">= 0.4" }
 
+  oxfmt@0.19.0:
+    resolution:
+      {
+        integrity: sha512-tPTa3j4kXdJBzBRlK9wR0/Lnd4J21rzg29cRr/VVqqfvdhZs6M+Q6TkL+rxI/IQpq8ZY8L3c+KZvga/RgeuMsg==,
+      }
+    engines: { node: ^20.19.0 || >=22.12.0 }
+    hasBin: true
+
   p-filter@2.1.0:
     resolution:
       {
@@ -11920,6 +11995,13 @@ packages:
         integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==,
       }
 
+  tinypool@2.0.0:
+    resolution:
+      {
+        integrity: sha512-/RX9RzeH2xU5ADE7n2Ykvmi9ED3FBGPAjw9u3zucrNNaEBIO0HPSYgL0NT7+3p147ojeSdaVu08F6hjpv31HJg==,
+      }
+    engines: { node: ^20.0.0 || >=22.0.0 }
+
   tmp@0.0.33:
     resolution:
       {
@@ -14301,6 +14383,30 @@ snapshots:
     dependencies:
       "@nodelib/fs.scandir": 2.1.5
       fastq: 1.19.1
+
+  "@oxfmt/darwin-arm64@0.19.0":
+    optional: true
+
+  "@oxfmt/darwin-x64@0.19.0":
+    optional: true
+
+  "@oxfmt/linux-arm64-gnu@0.19.0":
+    optional: true
+
+  "@oxfmt/linux-arm64-musl@0.19.0":
+    optional: true
+
+  "@oxfmt/linux-x64-gnu@0.19.0":
+    optional: true
+
+  "@oxfmt/linux-x64-musl@0.19.0":
+    optional: true
+
+  "@oxfmt/win32-arm64@0.19.0":
+    optional: true
+
+  "@oxfmt/win32-x64@0.19.0":
+    optional: true
 
   "@parcel/bundler-default@2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.17))":
     dependencies:
@@ -20026,6 +20132,19 @@ snapshots:
       object-keys: 1.1.1
       safe-push-apply: 1.0.0
 
+  oxfmt@0.19.0:
+    dependencies:
+      tinypool: 2.0.0
+    optionalDependencies:
+      "@oxfmt/darwin-arm64": 0.19.0
+      "@oxfmt/darwin-x64": 0.19.0
+      "@oxfmt/linux-arm64-gnu": 0.19.0
+      "@oxfmt/linux-arm64-musl": 0.19.0
+      "@oxfmt/linux-x64-gnu": 0.19.0
+      "@oxfmt/linux-x64-musl": 0.19.0
+      "@oxfmt/win32-arm64": 0.19.0
+      "@oxfmt/win32-x64": 0.19.0
+
   p-filter@2.1.0:
     dependencies:
       p-map: 2.1.0
@@ -21842,6 +21961,8 @@ snapshots:
       globrex: 0.1.2
 
   tiny-warning@1.0.3: {}
+
+  tinypool@2.0.0: {}
 
   tmp@0.0.33:
     dependencies:
