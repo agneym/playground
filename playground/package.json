@@ -7,8 +7,7 @@
     "start": "microbundle watch --jsx React.createElement",
     "build": "microbundle --jsx React.createElement",
     "test": "jest",
-    "prepublishOnly": "pnpm build",
-    "release": "np"
+    "prepublishOnly": "pnpm build"
   },
   "publishConfig": {
     "access": "public"
@@ -67,7 +66,6 @@
     "@types/react-inspector": "^4.0.2",
     "jest": "^27.2.5",
     "microbundle": "^0.14.0",
-    "np": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

@@ -7,9 +7,14 @@
     "start-example": "pnpm --filter example start",
     "build": "pnpm --filter @agney/playground build",
     "test": "pnpm --filter @agney/playground test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.2",
+    "@changesets/cli": "^2.29.8",
     "husky": "^6.0.0",
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.1",
@@ -18,6 +23,5 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:agneym/playground.git"
-  },
-  "dependencies": {}
+  }
 }
