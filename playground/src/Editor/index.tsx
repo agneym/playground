@@ -38,28 +38,20 @@ const Editor: FC<IProps> = ({ code, defaultTab, onChange, width }) => {
   }, []);
   return (
     <TabContainer
-      defaultIndex={tabs.findIndex(
-        (tab) => tab.code && tab.value === defaultTab
-      )}
+      defaultIndex={tabs.findIndex((tab) => tab.code && tab.value === defaultTab)}
       style={{ width: width }}
     >
       <StyledTabList>
-        {tabs.map(
-          (tab) => tab.code && <StyledTab key={tab.value}>{tab.name}</StyledTab>
-        )}
+        {tabs.map((tab) => tab.code && <StyledTab key={tab.value}>{tab.name}</StyledTab>)}
       </StyledTabList>
       <StyledTabPanels>
         {tabs.map(
           (tab) =>
             tab.code && (
               <StyledTabPanel key={tab.value}>
-                <EditorSetup
-                  code={code[tab.value]}
-                  onChange={onChange}
-                  language={tab.value}
-                />
+                <EditorSetup code={code[tab.value]} onChange={onChange} language={tab.value} />
               </StyledTabPanel>
-            )
+            ),
         )}
       </StyledTabPanels>
     </TabContainer>

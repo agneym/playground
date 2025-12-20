@@ -27,12 +27,7 @@ describe("Editor", () => {
   it("should render the default tab as per prop", () => {
     const defaultTab = "css";
     const { getByText } = render(
-      <Editor
-        width={40}
-        code={snippet}
-        defaultTab={defaultTab}
-        onChange={() => {}}
-      />
+      <Editor width={40} code={snippet} defaultTab={defaultTab} onChange={() => {}} />,
     );
     const button = getByText("CSS");
     expect(button.getAttribute("data-selected")).toBe("");
@@ -41,12 +36,7 @@ describe("Editor", () => {
   it("should render only the tabs that provided code", () => {
     const defaultTab = "markup";
     const { getByText, queryByText } = render(
-      <Editor
-        width={40}
-        code={emptySnippet}
-        defaultTab={defaultTab}
-        onChange={() => {}}
-      />
+      <Editor width={40} code={emptySnippet} defaultTab={defaultTab} onChange={() => {}} />,
     );
 
     const htmlTab = getByText("HTML");

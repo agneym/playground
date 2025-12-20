@@ -1,5 +1,4 @@
-const customMediaQuery = (maxWidth: number) =>
-  `@media (max-width: ${maxWidth}px)`;
+const customMediaQuery = (maxWidth: number) => `@media (max-width: ${maxWidth}px)`;
 
 const media = Object.freeze({
   custom: customMediaQuery,

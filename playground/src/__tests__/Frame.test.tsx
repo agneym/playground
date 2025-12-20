@@ -18,12 +18,7 @@ const initialSnippet = {
 describe("Frame", () => {
   it("should render error", () => {
     const { getByText } = render(
-      <Frame
-        id="thing"
-        snippet={initialSnippet}
-        transformJs={false}
-        presets={[]}
-      />
+      <Frame id="thing" snippet={initialSnippet} transformJs={false} presets={[]} />,
     );
     expect(getByText("error")).toBeDefined();
   });

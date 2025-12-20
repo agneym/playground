@@ -7,16 +7,13 @@ const ThemeContext = createContext(theme);
 export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProvider({ mode, userTheme, children }) {
-  const [consolidatedTheme, setConsolidatedTheme] =
-    useState<DefaultTheme>(theme);
+  const [consolidatedTheme, setConsolidatedTheme] = useState<DefaultTheme>(theme);
 
   useEffect(() => {
     setConsolidatedTheme(getTheme(mode));
   }, [mode]);
 
   return (
-    <ThemeContext.Provider value={userTheme ?? consolidatedTheme}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={userTheme ?? consolidatedTheme}>{children}</ThemeContext.Provider>
   );
 }
