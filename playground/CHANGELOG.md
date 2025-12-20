@@ -1,5 +1,11 @@
 # @agney/playground
 
+## 1.1.0
+
+### Minor Changes
+
+- [#88](https://github.com/agneym/playground/pull/88) [`fe7398c`](https://github.com/agneym/playground/commit/fe7398ce423f1a9bd31648a4009a2a299052d52f) Thanks [@agneym](https://github.com/agneym)! - Update the types and exports. The package is ESM only. Fix on latest 1.0 version
+
 ## 1.0.0
 
 ### Major Changes
