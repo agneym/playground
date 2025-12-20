@@ -1,23 +1,32 @@
 {
   "name": "@agney/playground",
   "version": "0.8.1",
-  "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "private": false,
-  "scripts": {
-    "start": "microbundle watch --jsx React.createElement",
-    "build": "microbundle --jsx React.createElement",
-    "test": "jest",
-    "prepublishOnly": "pnpm build"
+  "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
+  "keywords": [
+    "editor",
+    "playground",
+    "react"
+  ],
+  "bugs": {
+    "url": "https://github.com/agneym/playground/issues"
   },
-  "publishConfig": {
-    "access": "public"
+  "license": "MIT",
+  "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agneym/playground"
   },
   "source": "src/Playground.tsx",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "main": "dist/playground.js",
   "module": "dist/playground.module.js",
+  "types": "dist/Playground.d.ts",
   "unpkg": "dist/playground.umd.js",
   "umd:main": "dist/playground.umd.js",
-  "types": "dist/Playground.d.ts",
   "exports": {
     ".": {
       "browser": "./dist/playground.module.js",
@@ -26,20 +35,14 @@
       "require": "./dist/playground.js"
     }
   },
-  "keywords": [
-    "react",
-    "editor",
-    "playground"
-  ],
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
-  "license": "MIT",
-  "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "microbundle watch --jsx React.createElement",
+    "build": "microbundle --jsx React.createElement",
+    "test": "jest",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "@agney/react-inspector": "^4.0.0",
@@ -69,15 +72,12 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
   "jest": {
     "rootDir": "src",
     "testEnvironment": "jsdom"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/agneym/playground"
-  },
-  "bugs": {
-    "url": "https://github.com/agneym/playground/issues"
   }
 }

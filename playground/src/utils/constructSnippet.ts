@@ -7,7 +7,7 @@ function constructSnippet(
   { markup, css, javascript }: ISnippet,
   id: string | number,
   transformJs: boolean,
-  presets: string[]
+  presets: string[],
 ) {
   function constructJavaScript() {
     if (transformJs) {
@@ -57,9 +57,7 @@ function constructSnippet(
 
           Babel.registerPlugin('unpkg', unpkg);
 
-          const code = Babel.transform(decodeURI(\`${encodeURI(
-            javascript
-          )}\`), {
+          const code = Babel.transform(decodeURI(\`${encodeURI(javascript)}\`), {
             plugins: ['unpkg'],
             presets: ${JSON.stringify(presets)}  
           }).code;

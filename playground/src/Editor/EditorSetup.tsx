@@ -29,12 +29,7 @@ const EditorSetup: FC<IProps> = ({ code, language, onChange }) => {
         onValueChange={(value: string) => onChange(value, language)}
         style={{ height: "100%" }}
         highlight={(code) => (
-          <Highlight
-            {...defaultProps}
-            theme={theme}
-            code={code}
-            language={language}
-          >
+          <Highlight {...defaultProps} theme={theme} code={code} language={language}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <Fragment>
                 {tokens.map((line, i) => (

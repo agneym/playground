@@ -26,7 +26,7 @@ function useDrag({ containerRef, dividerRef, dividerWidth }: IProps) {
         setWidth(clientX - containerRect.left);
       }
     },
-    [containerRect]
+    [containerRect],
   );
   const stopDrag = useCallback(() => {
     document.removeEventListener("mousemove", keepDragging);

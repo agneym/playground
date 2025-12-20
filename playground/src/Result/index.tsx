@@ -20,30 +20,20 @@ interface IProps {
   width: number;
 }
 
-const Result: FC<IProps> = ({
-  id,
-  snippet,
-  presets,
-  defaultTab,
-  transformJs,
-  width,
-}) => {
+const Result: FC<IProps> = ({ id, snippet, presets, defaultTab, transformJs, width }) => {
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
     () => [
       { name: "Result", value: "result" as IResultTabs },
       { name: "Console", value: "console" as IResultTabs },
     ],
-    []
+    [],
   );
   useEffect(() => {
     function waitForMessage() {
       if (typeof window !== "undefined") {
         window.addEventListener("message", (data) => {
-          if (
-            data.data.source === `frame-${id}` &&
-            data.data.message.type === "log"
-          ) {
+          if (data.data.source === `frame-${id}` && data.data.message.type === "log") {
             setLogs((prevLogs) => [...prevLogs, ...data.data.message.data]);
           }
         });
@@ -63,12 +53,7 @@ const Result: FC<IProps> = ({
       </StyledTabList>
       <StyledTabPanels>
         <StyledTabPanel>
-          <Frame
-            id={id}
-            snippet={snippet}
-            transformJs={transformJs}
-            presets={presets}
-          />
+          <Frame id={id} snippet={snippet} transformJs={transformJs} presets={presets} />
         </StyledTabPanel>
         <StyledTabPanel>
           <Console logs={logs} />

@@ -35,10 +35,7 @@ const Frame: FC<IProps> = memo(({ id, snippet, transformJs, presets }) => {
     function waitForMessage() {
       if (typeof window !== "undefined") {
         window.addEventListener("message", (data) => {
-          if (
-            data.data.source === `frame-${id}` &&
-            data.data.message.type === "error"
-          ) {
+          if (data.data.source === `frame-${id}` && data.data.message.type === "error") {
             setError(data.data.message.data);
           }
         });

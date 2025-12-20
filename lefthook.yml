@@ -1,0 +1,5 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - run: pnpm format {staged_files}
+      glob: "*"
