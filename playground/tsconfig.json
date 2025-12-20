@@ -1,13 +1,29 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "jsx": "react",
-    "lib": ["es2017", "dom"],
-    "module": "ESNext",
-    "target": "ESNext",
-    "moduleResolution": "Node",
-    "typeRoots": ["./node_modules/@types", "../node_modules/@types", "src/types"]
-  },
-  "include": ["src/types"]
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "types": [],
+    "lib": ["esnext", "dom", "dom.iterable"],
+
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
 }
