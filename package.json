@@ -14,15 +14,15 @@
     "prepare": "husky install",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "format": "oxfmt --no-error-on-unmatched-pattern",
+    "format:check": "oxfmt --check"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.2",
     "@changesets/cli": "^2.29.8",
-    "husky": "^6.0.0",
+    "lefthook": "^2.0.12",
     "oxfmt": "^0.19.0",
-    "prettier": "^2.4.1",
-    "pretty-quick": "^3.1.1",
     "typescript": "^4.4.4"
   },
   "packageManager": "pnpm@10.26.1+sha512.664074abc367d2c9324fdc18037097ce0a8f126034160f709928e9e9f95d98714347044e5c3164d65bd5da6c59c6be362b107546292a8eecb7999196e5ce58fa"
