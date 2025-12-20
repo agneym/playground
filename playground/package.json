@@ -23,17 +23,12 @@
     "README.md"
   ],
   "type": "module",
-  "main": "dist/playground.js",
-  "module": "dist/playground.module.js",
+  "main": "dist/Playground.js",
   "types": "dist/Playground.d.ts",
-  "unpkg": "dist/playground.umd.js",
-  "umd:main": "dist/playground.umd.js",
   "exports": {
     ".": {
-      "browser": "./dist/playground.module.js",
-      "umd": "./dist/playground.umd.js",
-      "import": "./dist/playground.module.js",
-      "require": "./dist/playground.js"
+      "types": "./dist/Playground.d.ts",
+      "import": "./dist/Playground.js"
     }
   },
   "publishConfig": {
