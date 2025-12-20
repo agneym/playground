@@ -2,7 +2,6 @@
   "name": "@agney/playground",
   "version": "0.8.1",
   "private": false,
-  "type": "module",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "keywords": [
     "editor",
@@ -23,6 +22,7 @@
     "dist",
     "README.md"
   ],
+  "type": "module",
   "main": "dist/playground.js",
   "module": "dist/playground.module.js",
   "types": "dist/Playground.d.ts",
