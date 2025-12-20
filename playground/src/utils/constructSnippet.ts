@@ -1,4 +1,4 @@
-import { ISnippet } from "../types";
+import type { ISnippet } from "../types";
 
 /**
  * Constructs snippet from individual html, css and js code.

@@ -1,4 +1,5 @@
-import React, { FC, useMemo, useEffect, useState } from "react";
+import { useMemo, useEffect, useState } from "react";
+import type { FC } from "react";
 
 import {
   StyledTabList,
@@ -7,7 +8,7 @@ import {
   StyledTabPanel,
   StyledTabs,
 } from "../TabStyles";
-import { ISnippet, ITabConfig, IResultTabs } from "../types";
+import type { ISnippet, ITabConfig, IResultTabs } from "../types";
 import Console from "./Console";
 import Frame from "./Frame";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { render } from "../../scripts/test-utils";
 
 import Frame from "../Result/Frame";

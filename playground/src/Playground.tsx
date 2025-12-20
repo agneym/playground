@@ -1,18 +1,21 @@
-import React, { FC, useState, createElement } from "react";
+import { useState, createElement } from "react";
+import type { FC } from "react";
 import { useId } from "@reach/auto-id";
-import { styled, setup, DefaultTheme } from "goober";
+import { styled, setup } from "goober";
+import type { DefaultTheme } from "goober";
 
 import Editor from "./Editor";
 import Result from "./Result";
-import { ISnippet, IEditorTabs, IResultTabs } from "./types";
+import type { ISnippet, IEditorTabs, IResultTabs } from "./types";
 import { ThemeProvider, useTheme } from "./utils/ThemeProvider";
-import { ColorMode } from "./utils/theme";
+import type { ColorMode } from "./utils/theme";
 import media from "./utils/media";
 import Draggable from "./Draggable";
 
 setup(createElement, undefined, useTheme);
 
-const StyledDraggable = styled(Draggable)`
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const StyledDraggable = styled(Draggable as any)`
   border: 0.1em solid ${(props) => props.theme.container.borderColor};
   display: flex;
   min-height: ${(props) => props.theme.container.minHeight};
@@ -57,7 +60,7 @@ const Playground: FC<IProps> = ({
     <ThemeProvider userTheme={theme} mode={mode}>
       <div className="playground">
         <StyledDraggable
-          leftChild={(width) => (
+          leftChild={(width: number) => (
             <Editor
               width={width}
               code={snippet}
@@ -65,7 +68,7 @@ const Playground: FC<IProps> = ({
               onChange={onSnippetChange}
             />
           )}
-          rightChild={(width) => (
+          rightChild={(width: number) => (
             <Result
               width={width}
               id={id}

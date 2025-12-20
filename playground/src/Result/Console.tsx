@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 import { styled } from "goober";
+// @ts-expect-error - no types available for @agney/react-inspector
 import Inspector from "@agney/react-inspector";
 
 const Container = styled("div")`

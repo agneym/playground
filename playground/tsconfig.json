@@ -3,7 +3,7 @@
     "module": "preserve",
     "moduleResolution": "bundler",
     "target": "esnext",
-    "types": [],
+    "types": ["jest"],
     "lib": ["esnext", "dom", "dom.iterable"],
 
     "sourceMap": true,

@@ -1,4 +1,5 @@
-import React, { FC, ReactNode, useRef, forwardRef } from "react";
+import { useRef, forwardRef } from "react";
+import type { FC, ReactNode } from "react";
 import { styled } from "goober";
 
 import useDrag from "./useDrag";
