@@ -1,8 +1,8 @@
-import React, { FC, useMemo } from "react";
+import { useMemo } from "react";
+import type { FC } from "react";
 import { styled } from "goober";
-import { IEditorTabs, ISnippet } from "../types";
+import type { IEditorTabs, ISnippet, ITabConfig } from "../types";
 import EditorSetup from "./EditorSetup";
-import { ITabConfig } from "../types";
 import {
   StyledTabs,
   StyledTabList,
@@ -11,7 +11,8 @@ import {
   StyledTabPanel,
 } from "../TabStyles";
 
-const TabContainer = styled(StyledTabs)`
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TabContainer = styled(StyledTabs as any)`
   min-width: ${(props) => props.theme.container.minWidth};
 `;
 
@@ -24,7 +25,7 @@ interface IProps {
 
 const Editor: FC<IProps> = ({ code, defaultTab, onChange, width }) => {
   const tabs: Readonly<ITabConfig<IEditorTabs>[]> = useMemo(() => {
-    const tabsArr = [];
+    const tabsArr: ITabConfig<IEditorTabs>[] = [];
     if (code.markup) {
       tabsArr.push({ name: "HTML", value: "markup", code: code.markup });
     }
@@ -35,7 +36,7 @@ const Editor: FC<IProps> = ({ code, defaultTab, onChange, width }) => {
       tabsArr.push({ name: "JS", value: "javascript", code: code.javascript });
     }
     return tabsArr;
-  }, []);
+  }, [code.markup, code.css, code.javascript]);
   return (
     <TabContainer
       defaultIndex={tabs.findIndex((tab) => tab.code && tab.value === defaultTab)}

@@ -1,7 +1,8 @@
-import React, { FC, useMemo, useState, memo, useEffect } from "react";
+import { useMemo, useState, memo, useEffect } from "react";
+import type { FC } from "react";
 import { styled } from "goober";
 
-import { ISnippet } from "../types";
+import type { ISnippet } from "../types";
 import constructSnippet from "../utils/constructSnippet";
 import ErrorDisplay from "./ErrorDisplay";
 
@@ -27,7 +28,7 @@ const Frame: FC<IProps> = memo(({ id, snippet, transformJs, presets }) => {
       setCode(code);
       setError(null);
     } catch (err) {
-      setError(err.message);
+      setError(err instanceof Error ? err.message : String(err));
     }
   }, [snippet, transformJs]);
 

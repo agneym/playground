@@ -1,12 +1,14 @@
-import React from "react";
+import { vi } from "vitest";
 import { render } from "../../scripts/test-utils";
 
 import Frame from "../Result/Frame";
 
-jest.mock("../utils/constructSnippet", () => {
-  return jest.fn().mockImplementation(() => {
-    throw new Error("error");
-  });
+vi.mock("../utils/constructSnippet", () => {
+  return {
+    default: vi.fn().mockImplementation(() => {
+      throw new Error("error");
+    }),
+  };
 });
 
 const initialSnippet = {

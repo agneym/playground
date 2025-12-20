@@ -1,12 +1,20 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import type { ReactNode } from "react";
 import getTheme, { theme } from "./theme";
+import type { ColorMode } from "./theme";
 
 export type DefaultTheme = typeof theme;
 
 const ThemeContext = createContext(theme);
 export const useTheme = () => useContext(ThemeContext);
 
-export function ThemeProvider({ mode, userTheme, children }) {
+interface ThemeProviderProps {
+  mode: ColorMode;
+  userTheme: DefaultTheme | undefined;
+  children: ReactNode;
+}
+
+export function ThemeProvider({ mode, userTheme, children }: ThemeProviderProps) {
   const [consolidatedTheme, setConsolidatedTheme] = useState<DefaultTheme>(theme);
 
   useEffect(() => {
