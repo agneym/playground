@@ -41,7 +41,8 @@
   "scripts": {
     "start": "tsdown --watch",
     "build": "tsdown",
-    "test": "jest",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "prepublishOnly": "pnpm build",
     "type:check": "tsgo --noEmit"
   },
@@ -56,9 +57,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.1.0",
-    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
-    "@types/jest": "^27.0.2",
     "@types/lodash": "^4.14.175",
     "@types/lodash-es": "^4.17.5",
     "@types/lodash.merge": "^4.6.6",
@@ -66,17 +65,14 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-inspector": "^4.0.2",
     "babel-plugin-react-compiler": "^1.0.0",
-    "jest": "^27.2.5",
+    "jsdom": "^26.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "tsdown": "^0.18.1"
+    "tsdown": "^0.18.1",
+    "vitest": "^3.0.0"
   },
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16"
-  },
-  "jest": {
-    "rootDir": "src",
-    "testEnvironment": "jsdom"
   }
 }
