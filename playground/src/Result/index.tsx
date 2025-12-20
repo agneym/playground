@@ -18,6 +18,7 @@ interface IProps {
   transformJs: boolean;
   presets: string[];
   width: number;
+  showConsole?: boolean;
 }
 
 const Result: FC<IProps> = ({
@@ -27,14 +28,17 @@ const Result: FC<IProps> = ({
   defaultTab,
   transformJs,
   width,
+  showConsole = true,
 }) => {
   const [logs, setLogs] = useState<unknown[]>([]);
   const tabs: Readonly<ITabConfig<IResultTabs>[]> = useMemo(
     () => [
       { name: "Result", value: "result" as IResultTabs },
-      { name: "Console", value: "console" as IResultTabs },
+      ...(showConsole
+        ? [{ name: "Console", value: "console" as IResultTabs }]
+        : []),
     ],
-    []
+    [showConsole]
   );
   useEffect(() => {
     function waitForMessage() {

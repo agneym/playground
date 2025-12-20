@@ -22,6 +22,7 @@ const app = html\`
 render(app, document.getElementById('app'));
     `,
   };
+
   return (
     <div style={{ width: "80%", margin: "0 auto" }}>
       <Playground
@@ -30,6 +31,7 @@ render(app, document.getElementById('app'));
         defaultResultTab="result"
         mode="dark"
         transformJs
+        showConsole={true}
       />
     </div>
   );
