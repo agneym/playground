@@ -22,6 +22,7 @@
     "dist",
     "README.md"
   ],
+  "type": "module",
   "main": "dist/playground.js",
   "module": "dist/playground.module.js",
   "types": "dist/Playground.d.ts",
