@@ -11,7 +11,6 @@
     "start-example": "pnpm --filter example start",
     "build": "pnpm --filter @agney/playground build",
     "test": "pnpm --filter @agney/playground test",
-    "prepare": "husky install",
     "changeset": "changeset",
     "version": "changeset version",
     "release": "pnpm build && changeset publish",
