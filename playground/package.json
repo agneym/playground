@@ -2,6 +2,7 @@
   "name": "@agney/playground",
   "version": "0.8.1",
   "private": false,
+  "type": "module",
   "description": "A simple playground for HTML, CSS and JavaScript supporting module imports.",
   "keywords": [
     "editor",
