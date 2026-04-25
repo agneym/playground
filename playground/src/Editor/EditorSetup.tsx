@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import type { FC } from "react";
 import SimpleEditor from "react-simple-code-editor";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwl";
+import { Highlight, themes } from "prism-react-renderer";
+const theme = themes.nightOwl;
 import { styled } from "goober";
 
 import type { IEditorTabs } from "../types";
@@ -30,7 +30,7 @@ const EditorSetup: FC<IProps> = ({ code, language, onChange }) => {
         onValueChange={(value: string) => onChange(value, language)}
         style={{ height: "100%" }}
         highlight={(code) => (
-          <Highlight {...defaultProps} theme={theme} code={code} language={language}>
+          <Highlight theme={theme} code={code} language={language}>
             {({ tokens, getLineProps, getTokenProps }) => (
               <Fragment>
                 {tokens.map((line, i) => (
