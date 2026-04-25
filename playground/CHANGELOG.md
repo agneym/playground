@@ -1,5 +1,11 @@
 # @agney/playground
 
+## 2.0.0
+
+### Major Changes
+
+- [#93](https://github.com/agneym/playground/pull/93) [`3223fc6`](https://github.com/agneym/playground/commit/3223fc6724b06b6146ec52ea51f4caa78aadc9bd) Thanks [@agneym](https://github.com/agneym)! - Raise minimum React version to 18
+
 ## 1.1.0
 
 ### Minor Changes
