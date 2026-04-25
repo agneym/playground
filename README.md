@@ -52,12 +52,7 @@ const app = html\`<div>Hello World from Playground!</div>\`
 render(app, document.getElementById('app'));`,
   };
   return (
-    <Playground
-      id="example"
-      initialSnippet={snippet}
-      defaultEditorTab="javascript"
-      transformJs
-    />
+    <Playground id="example" initialSnippet={snippet} defaultEditorTab="javascript" transformJs />
   );
 };
 ```
@@ -125,10 +120,7 @@ You can use community created packages to replicate the functionality. For eg. R
 import React, { createElement } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
 
-ReactDOM.render(
-  createElement("div", {}, "Hello World"),
-  document.getElementById("app")
-);
+ReactDOM.render(createElement("div", {}, "Hello World"), document.getElementById("app"));
 ```
 
 ### How do I demo React code with JSX?
